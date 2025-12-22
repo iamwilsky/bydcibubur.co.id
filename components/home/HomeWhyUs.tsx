@@ -22,7 +22,7 @@ export const HomeWhyUs: React.FC = () => {
               Kenapa Membeli di <br />BYD Cibubur?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Selain lokasi yang mudah dijangkau, kami memiliki tim Sales Consultant berpengalaman yang siap membantu proses pembelian mobil listrik pertama Anda, mulai dari simulasi kredit hingga pemasangan Home Charging.
+              Dealer BYD Cibubur berlokasi strategis di Jl. Transyogi, siap melayani pembelian mobil listrik untuk wilayah Jatikarya, Kota Wisata, Depok, hingga Bekasi. Kami memiliki tim Sales Consultant berpengalaman yang siap membantu proses pembelian pertama Anda.
             </p>
 
             <Button onClick={() => openModal()} variant="primary" className="dark:bg-teal-600 dark:hover:bg-teal-700 dark:text-white dark:border-none">

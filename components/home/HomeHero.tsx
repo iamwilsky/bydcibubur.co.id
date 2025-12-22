@@ -123,7 +123,7 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
                 <div className="lg:hidden w-full h-[25vh] min-h-[200px] max-h-[280px] relative mb-4 flex items-center justify-center">
                   <img
                     src={model.heroImage}
-                    alt={model.name}
+                    alt={`Promo ${model.name} BYD Cibubur`}
                     className="w-full h-full object-contain drop-shadow-xl"
                   />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-teal-500/10 blur-[40px] rounded-full -z-10"></div>
@@ -188,7 +188,7 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
                 <div className="relative w-full h-[80vh] flex items-center justify-center">
                   <img
                     src={model.heroImage}
-                    alt={model.name}
+                    alt={`Promo ${model.name} BYD Cibubur`}
                     className="w-full h-full object-contain object-center drop-shadow-2xl"
                   />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-teal-500/5 dark:bg-teal-500/10 blur-[80px] rounded-full -z-10"></div>
