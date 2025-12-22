@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
@@ -130,6 +131,16 @@ export default async function RootLayout({
                 />
             </head>
             <body className="font-sans bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-900 dark:text-white antialiased">
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-Z20JS2NHVY" strategy="afterInteractive" />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-Z20JS2NHVY');
+                    `}
+                </Script>
                 <Providers>
                     {children}
                 </Providers>
