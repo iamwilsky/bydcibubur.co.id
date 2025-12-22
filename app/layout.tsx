@@ -15,48 +15,49 @@ const spaceGrotesk = Space_Grotesk({
     display: 'swap',
 })
 
-metadataBase: new URL('https://bydcibubur.co.id'),
+export const metadata: Metadata = {
+    metadataBase: new URL('https://bydcibubur.co.id'),
     alternates: {
-    canonical: '/',
+        canonical: '/',
     },
-title: {
+    title: {
         default: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD - Sealion 7, Seal, Atto 3, Dolphin',
         template: '%s | BYD Cibubur'
-},
-description: 'Kunjungi BYD Cibubur, dealer resmi BYD Indonesia. Dapatkan penawaran harga terbaik untuk mobil listrik BYD Sealion 7, Seal, Atto 3, dan Dolphin. Test drive sekarang di showroom kami.',
-    keywords: ['BYD Cibubur', 'Dealer BYD', 'BYD Sealion 7', 'BYD Seal', 'BYD Atto 3', 'BYD Dolphin', 'Mobil Listrik Indonesia'],
-        openGraph: {
-    title: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD',
-        description: 'Dealer Resmi BYD Cibubur. Wujudkan impian mobil listrik Anda dengan teknologi BYD Blade Battery. Hubungi kami untuk promo terbaru.',
-            url: 'https://bydcibubur.co.id',
-                siteName: 'BYD Cibubur',
-                    images: [
-                        {
-                            url: '/images/og-image.jpg', // Ensure this exists or use a generic one
-                            width: 1200,
-                            height: 630,
-                        }
-                    ],
-                        type: 'website',
-                            locale: 'id_ID',
     },
-robots: {
-    index: true,
+    description: 'Kunjungi BYD Cibubur, dealer resmi BYD Indonesia. Dapatkan penawaran harga terbaik untuk mobil listrik BYD Sealion 7, Seal, Atto 3, dan Dolphin. Test drive sekarang di showroom kami.',
+    keywords: ['BYD Cibubur', 'Dealer BYD', 'BYD Sealion 7', 'BYD Seal', 'BYD Atto 3', 'BYD Dolphin', 'Mobil Listrik Indonesia'],
+    openGraph: {
+        title: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD',
+        description: 'Dealer Resmi BYD Cibubur. Wujudkan impian mobil listrik Anda dengan teknologi BYD Blade Battery. Hubungi kami untuk promo terbaru.',
+        url: 'https://bydcibubur.co.id',
+        siteName: 'BYD Cibubur',
+        images: [
+            {
+                url: '/images/og-image.jpg', // Ensure this exists or use a generic one
+                width: 1200,
+                height: 630,
+            }
+        ],
+        type: 'website',
+        locale: 'id_ID',
+    },
+    robots: {
+        index: true,
         follow: true,
     },
-icons: {
-    icon: [
-        { url: '/favicon.ico' },
-        { url: '/favicon.svg', type: 'image/svg+xml' },
-        { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-    ],
+    icons: {
+        icon: [
+            { url: '/favicon.ico' },
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+        ],
         apple: [
             { url: '/apple-touch-icon.png' },
         ],
     },
-manifest: '/manifest.json',
+    manifest: '/manifest.json',
     verification: {
-    google: 'google-site-verification-code', // Add if available
+        google: 'google-site-verification-code', // Add if available
     }
 }
 
