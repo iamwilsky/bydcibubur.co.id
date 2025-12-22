@@ -239,21 +239,21 @@ export const LeadsView: React.FC = () => {
 
                   <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{lead.model}</div>
 
-                  <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100 dark:border-slate-700">
-                    <div className="text-sm font-mono text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                  <div className="mt-4 pt-3 border-t border-gray-100 dark:border-slate-700">
+                    <div className="text-sm font-mono text-gray-500 dark:text-gray-400 flex items-center gap-2 mb-3">
                       <Phone className="w-3 h-3" /> {lead.phone}
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 w-full">
                       <button
                         onClick={() => openLeadModal(lead)}
-                        className="px-3 py-2 bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-bold uppercase tracking-wider"
+                        className="flex-1 px-3 py-2 bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-bold uppercase tracking-wider justify-center"
                       >
                         Manage
                       </button>
                       {/* Styled Follow-up Button (Mobile) - THEME COLOR */}
                       <button
                         onClick={() => handleWhatsAppClick(lead)}
-                        className="px-4 py-2 bg-teal-600 text-white rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-teal-700 shadow-sm"
+                        className="flex-1 px-3 py-2 bg-teal-600 text-white rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-teal-700 shadow-sm justify-center"
                       >
                         FOLLOW-UP
                       </button>
