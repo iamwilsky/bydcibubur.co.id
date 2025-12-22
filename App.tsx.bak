@@ -1,0 +1,60 @@
+
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/layout/Layout';
+import { HomePage } from './pages/HomePage';
+import { ModelDetailPage } from './pages/ModelDetailPage';
+import { VariantDetailPage } from './pages/VariantDetailPage';
+import { PriceListPage } from './pages/PriceListPage';
+import { AboutPage } from './pages/AboutPage';
+import { AdminPage } from './pages/AdminPage';
+import { ModalProvider } from './contexts/ModalContext';
+import { DataProvider, useData } from './contexts/DataContext';
+import { AuthProvider } from './contexts/AuthContext';
+import { ScrollToTop } from './components/utils/ScrollToTop';
+
+// Create a wrapper component to use the hook
+const AppContent = () => {
+  const { trackVisitor } = useData();
+
+  useEffect(() => {
+    trackVisitor();
+  }, []);
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        {/* Admin Route - Renders without the standard public Layout */}
+        <Route path="/admin" element={<AdminPage />} />
+        
+        {/* Public Routes - Wrapped in standard Layout */}
+        <Route path="*" element={
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/pricelist" element={<PriceListPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/model/:id" element={<ModelDetailPage />} />
+              <Route path="/variant/:modelId/:variantId" element={<VariantDetailPage />} />
+            </Routes>
+          </Layout>
+        } />
+      </Routes>
+    </Router>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <DataProvider>
+        <ModalProvider>
+          <AppContent />
+        </ModalProvider>
+      </DataProvider>
+    </AuthProvider>
+  );
+}
+
+export default App;
