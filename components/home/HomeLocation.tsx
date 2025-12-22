@@ -31,7 +31,7 @@ export const HomeLocation: React.FC = () => {
                   <MapPin className="w-5 h-5 text-slate-900 dark:text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white mb-1">Alamat Dealer</h4>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-1">Alamat Dealer</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">{dealerInfo.address}</p>
                 </div>
               </div>
@@ -41,7 +41,7 @@ export const HomeLocation: React.FC = () => {
                   <Clock className="w-5 h-5 text-slate-900 dark:text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white mb-1">Jam Operasional</h4>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-1">Jam Operasional</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Senin - Minggu: 08:30 - 20:00 WIB</p>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export const HomeLocation: React.FC = () => {
                   <Phone className="w-5 h-5 text-slate-900 dark:text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white mb-1">Hubungi Kami</h4>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-1">Hubungi Kami</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Sales: {dealerInfo.displayPhone} ({dealerInfo.salesName})</p>
                 </div>
               </div>

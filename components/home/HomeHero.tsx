@@ -101,18 +101,18 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
               {/* Left Column: Text Content */}
               <div className={`w-full lg:w-1/2 pt-16 md:pt-24 lg:pt-0 z-30 flex flex-col justify-center transition-all duration-1000 delay-300 transform ${index === currentSlide ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
 
-                {/* Badge */}
+                {/* Badge (Now Semantic H1) */}
                 <div className="flex items-center gap-3 mb-3 md:mb-6">
-                  <span className="px-3 py-1 border border-teal-500/50 text-teal-600 dark:text-teal-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full bg-teal-50 dark:bg-teal-950/30 backdrop-blur-sm">
-                    Dealer Resmi BYD
-                  </span>
+                  <h1 className="px-3 py-1 border border-teal-500/50 text-teal-600 dark:text-teal-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full bg-teal-50 dark:bg-teal-950/30 backdrop-blur-sm">
+                    Dealer Resmi BYD Cibubur
+                  </h1>
                 </div>
 
-                {/* Heading */}
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-3 md:mb-6 text-slate-900 dark:text-white">
+                {/* Model Name (Now Semantic H2) */}
+                <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-3 md:mb-6 text-slate-900 dark:text-white">
                   {model.name.replace('BYD ', '')}
                   <span className="text-teal-500">.</span>
-                </h1>
+                </h2>
 
                 {/* Description */}
                 <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 font-light mb-4 md:mb-8 max-w-lg leading-relaxed line-clamp-2 md:line-clamp-none">
