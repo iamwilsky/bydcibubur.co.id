@@ -39,10 +39,51 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
     setTimeout(() => setIsAnimating(false), 500);
   }, [isAnimating, models]);
 
+  // Touch handling for swipe
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
+  const prevSlide = useCallback(() => {
+    if (isAnimating || models.length === 0) return;
+    setIsAnimating(true);
+    setCurrentSlide((prev) => (prev === 0 ? models.length - 1 : prev - 1));
+    setTimeout(() => setIsAnimating(false), 500);
+  }, [isAnimating, models]);
+
   if (!models || models.length === 0) return null;
 
   return (
-    <section className="relative h-[100dvh] min-h-[600px] w-full overflow-hidden bg-white dark:bg-[#0B1215] text-slate-900 dark:text-white transition-colors duration-300">
+    <section
+      className="relative h-[100dvh] min-h-[600px] w-full overflow-hidden bg-white dark:bg-[#0B1215] text-slate-900 dark:text-white transition-colors duration-300"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
 
       {/* Background Radial Gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-100 via-white to-white dark:from-slate-800/40 dark:via-[#0B1215] dark:to-[#0B1215] pointer-events-none"></div>
@@ -159,15 +200,15 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
         </div>
       ))}
 
-      {/* Pagination Dots */}
-      <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-40 flex space-x-3">
+      {/* Pagination Dots (Hidden on mobile) */}
+      <div className="hidden md:flex absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-40 space-x-3">
         {models.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-1 transition-all duration-300 rounded-full ${index === currentSlide
-                ? 'w-8 bg-teal-600 dark:bg-teal-500'
-                : 'w-2 bg-slate-300 dark:bg-white/30 hover:bg-slate-400 dark:hover:bg-white'
+              ? 'w-8 bg-teal-600 dark:bg-teal-500'
+              : 'w-2 bg-slate-300 dark:bg-white/30 hover:bg-slate-400 dark:hover:bg-white'
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
