@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Search, User, Lock, Menu, Loader2 } from 'lucide-react'
+import { User, Lock, Menu, Loader2 } from 'lucide-react'
 
 import { AdminSidebar, ViewType } from '@/components/admin/AdminSidebar'
 import { DashboardView } from '@/components/admin/DashboardView'
@@ -101,15 +101,10 @@ export default function AdminPage() {
       <div className="flex-1 md:ml-64">
         <header className="h-16 bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 px-4 md:px-8 flex items-center justify-between sticky top-0 z-10">
           <button onClick={() => setSidebarOpen(true)} className="md:hidden p-2 -ml-2 text-gray-500"><Menu className="w-6 h-6" /></button>
-          <div className="flex-1 max-w-md mx-4 hidden md:block">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input type="text" placeholder="Search..." className="w-full bg-gray-100 dark:bg-slate-700 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white" />
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-300 hidden sm:block">{session.user.email}</span>
-            <div className="w-9 h-9 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold text-sm">{session.user.email?.charAt(0).toUpperCase()}</div>
+          <h1 className="text-xl font-bold text-slate-900 dark:text-white hidden md:block">Dashboard</h1>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">{session.user.email}</span>
           </div>
         </header>
         <main className="p-4 md:p-8">{renderView()}</main>
