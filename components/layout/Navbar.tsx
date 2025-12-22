@@ -105,8 +105,8 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${showSolidNav
-            ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm py-4'
-            : 'bg-transparent py-6'
+          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm py-4'
+          : 'bg-transparent py-6'
           }`}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -137,8 +137,8 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={toggleTheme}
                 className={`p-2 rounded-full transition-colors ${showSolidNav
-                    ? 'hover:bg-gray-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white'
-                    : `${textColorClass} hover:bg-black/5 dark:hover:bg-white/10`
+                  ? 'hover:bg-gray-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white'
+                  : `${textColorClass} hover:bg-black/5 dark:hover:bg-white/10`
                   }`}
                 aria-label="Toggle Dark Mode"
               >
@@ -150,8 +150,8 @@ export const Navbar: React.FC = () => {
                 <button
                   onClick={handleProfileClick}
                   className={`p-2 rounded-full transition-colors flex items-center gap-2 ${showSolidNav
-                      ? 'hover:bg-gray-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white'
-                      : `${textColorClass} hover:bg-black/5 dark:hover:bg-white/10`
+                    ? 'hover:bg-gray-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white'
+                    : `${textColorClass} hover:bg-black/5 dark:hover:bg-white/10`
                     } ${session ? 'pl-3 pr-2 bg-gray-100/50 dark:bg-slate-800/50' : ''}`}
                   aria-label="User Account"
                 >
@@ -216,6 +216,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={toggleTheme}
               className={`p-1 ${logoColorClass}`}
+              aria-label="Toggle Dark Mode"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
@@ -223,6 +224,7 @@ export const Navbar: React.FC = () => {
             <button
               className={`z-50 transition-colors ${logoColorClass}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle Mobile Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

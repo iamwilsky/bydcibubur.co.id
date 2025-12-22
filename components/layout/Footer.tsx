@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
               Official authorized dealer providing the future of electric mobility. Experience the innovation, safety, and luxury of BYD vehicles.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-500 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-500 transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-500 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-500 transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
