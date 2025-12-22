@@ -167,7 +167,7 @@ export function PriceListContent({ models, currentMonth }: Props) {
                 <div className="container mx-auto px-4 md:px-8 max-w-4xl">
                     <div className="mb-8">
                         <h2 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2">
-                            Ringkasan Harga OTR BYD 2024
+                            Ringkasan Harga OTR BYD 2025
                         </h2>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                             Tabel perbandingan harga lengkap untuk memudahkan Anda memilih varian yang tepat.
