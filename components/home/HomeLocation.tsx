@@ -77,7 +77,7 @@ export const HomeLocation: React.FC = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="grayscale group-hover:grayscale-0 transition-all duration-500"
             ></iframe>
-            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold shadow-sm pointer-events-none">
+            <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 text-slate-900 dark:text-white backdrop-blur px-4 py-2 rounded-lg text-xs font-bold shadow-sm pointer-events-none border border-white/20 dark:border-slate-700">
               📍 {dealerInfo.dealerName}
             </div>
           </div>

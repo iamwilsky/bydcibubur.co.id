@@ -58,6 +58,9 @@ export const metadata: Metadata = {
     manifest: '/manifest.json',
     verification: {
         google: 'google-site-verification-code', // Add if available
+    },
+    other: {
+        'og:logo': 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
     }
 }
 
