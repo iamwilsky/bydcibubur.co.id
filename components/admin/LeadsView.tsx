@@ -21,6 +21,7 @@ export const LeadsView: React.FC = () => {
   }>({ name: '', model: '', status: 'New' });
 
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isConfirmingDelete, setIsConfirmingDelete] = useState(false);
 
   // Trigger fetch once when this component mounts (enters screen)
   useEffect(() => {
@@ -43,6 +44,7 @@ export const LeadsView: React.FC = () => {
     });
     setIsModalOpen(true);
     setIsDeleting(false);
+    setIsConfirmingDelete(false);
   };
 
   const handleUpdateLead = () => {
@@ -323,26 +325,24 @@ export const LeadsView: React.FC = () => {
                   >
                     Save Changes
                   </button>
-                  <button
-                    onClick={handleDelete}
-                    disabled={isDeleting}
-                    className="px-4 py-2 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-lg font-bold text-sm hover:bg-red-100 dark:hover:bg-red-900/20 flex items-center gap-2 disabled:opacity-50"
-                  >
-                    {isDeleting ? (
-                      'Deleting...'
-                    ) : (
-                      <><Trash2 className="w-4 h-4" /> Delete</>
-                    )}
-                  </button>
+                  {isConfirmingDelete ? (
+                    <button
+                      onClick={handleDelete}
+                      disabled={isDeleting}
+                      className="px-4 py-2 bg-red-600 text-white rounded-lg font-bold text-sm hover:bg-red-700 flex items-center gap-2 disabled:opacity-50 animate-fade-in"
+                    >
+                      {isDeleting ? 'Deleting...' : 'Yakin hapus?'}
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setIsConfirmingDelete(true)}
+                      disabled={isDeleting}
+                      className="px-4 py-2 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-lg font-bold text-sm hover:bg-red-100 dark:hover:bg-red-900/20 flex items-center gap-2 disabled:opacity-50"
+                    >
+                      <Trash2 className="w-4 h-4" /> Delete
+                    </button>
+                  )}
                 </div>
-
-                {/* Quick Action in Modal */}
-                <button
-                  onClick={() => handleWhatsAppClick(selectedLead)}
-                  className="w-full mt-2 py-2 bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
-                >
-                  Send Follow-up Message
-                </button>
               </div>
             )}
           </Dialog.Panel>
