@@ -43,13 +43,49 @@ export default async function VariantDetailPage({
     const { modelId, variantId } = await params
     const model = await getModelById(modelId)
     const variant = model?.variants.find(v => v.id === variantId)
+    const dealerInfo = await getDealerInfo()
 
     if (!model || !variant) {
         notFound()
     }
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Car',
+        name: `${model.name} ${variant.name}`,
+        image: `https://bydcibubur.co.id${variant.imageUrl || model.heroImage}`,
+        description: `BYD ${model.name} ${variant.name} (${variant.powertrain}). Baterai ${variant.battery.capacity} kWh, Jarak Tempuh ${variant.battery.range}. Akselerasi ${variant.performance.acceleration}.`,
+        brand: {
+            '@type': 'Brand',
+            name: 'BYD',
+        },
+        model: model.name,
+        vehicleConfiguration: `${variant.name} Trim`,
+        manufacturer: {
+            '@type': 'Organization',
+            name: 'BYD Auto',
+        },
+        offers: {
+            '@type': 'Offer',
+            url: `https://bydcibubur.co.id/variant/${model.id}/${variant.id}`,
+            priceCurrency: 'IDR',
+            price: variant.price,
+            itemCondition: 'https://schema.org/NewCondition',
+            availability: variant.soldOut ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+            seller: {
+                '@type': 'AutoDealer',
+                name: dealerInfo.dealerName,
+                telephone: `+${dealerInfo.salesPhone}`,
+            },
+        },
+    }
+
     return (
         <Layout>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <VariantDetailContent model={model} variant={variant} />
         </Layout>
     )

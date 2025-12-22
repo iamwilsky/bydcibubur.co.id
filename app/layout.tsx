@@ -81,7 +81,7 @@ const jsonLd = {
         longitude: 106.9158
     },
     url: 'https://bydcibubur.co.id',
-    telephone: '+6281234567890', // Update with real number if available in Constants
+    telephone: '+6282298200029', // Update with real number if available in Constants
     openingHoursSpecification: [
         {
             '@type': 'OpeningHoursSpecification',
