@@ -7,18 +7,18 @@ export const sealData: CarModel = {
   tagline: 'Born to Run',
   category: CarCategory.SEDAN,
   description: 'Winner of the iF Design Award. A masterpiece of ocean aesthetics and aerodynamic performance. The BYD Seal redefines the electric sports sedan.',
-  startingPrice: 639000000, 
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/seal-fix.png',
+  startingPrice: 639000000,
+  heroImage: '/images/models/seal/hero/byd-seal-hero.webp',
   youtubeVideoId: 'S4wK0j4s7V0', // Official BYD Seal Video ID
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/product/seal/seal-aesthetic.png',
-    'https://www.byd.com/content/dam/byd-site/id/product/seal/seal-back.png',
-    'https://www.byd.com/content/dam/byd-site/id/product/seal/seal-brochure.png'
+    '/images/models/seal/gallery/byd-seal-gallery-1.webp',
+    '/images/models/seal/gallery/byd-seal-gallery-2.webp',
+    '/images/models/seal/gallery/byd-seal-gallery-3.webp'
   ],
   seats: 5,
   summaryRange: 'Up to 650 km (NEDC)',
   summaryPowertrain: 'RWD / AWD',
-  
+
   dimensions: {
     length: 4800,
     width: 1875,
@@ -26,7 +26,7 @@ export const sealData: CarModel = {
     wheelbase: 2920,
     turningRadius: 5.7
   },
-  
+
   trunk: {
     frunk: 50,
     rear: 400
@@ -98,25 +98,25 @@ export const sealData: CarModel = {
   },
 
   colors: [
-    { 
-      name: 'Cosmos Black', 
-      hex: '#020617', 
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/order/seal/pc/wheel/black.jpg' 
+    {
+      name: 'Cosmos Black',
+      hex: '#020617',
+      imageUrl: '/images/models/seal/colors/byd-seal-cosmos-black.webp'
     },
-    { 
-      name: 'Aurora White', 
-      hex: '#f8fafc', 
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/order/seal/pc/wheel/white.jpg' 
+    {
+      name: 'Aurora White',
+      hex: '#f8fafc',
+      imageUrl: '/images/models/seal/colors/byd-seal-aurora-white.webp'
     },
-    { 
-      name: 'Atlantis Grey', 
-      hex: '#334155', 
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/order/seal/pc/wheel/atlantis-grey.jpg' 
+    {
+      name: 'Atlantis Grey',
+      hex: '#334155',
+      imageUrl: '/images/models/seal/colors/byd-seal-atlantis-grey.webp'
     },
-    { 
-      name: 'Shark Grey', 
-      hex: '#4b5563', 
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/order/seal/pc/wheel/blue.jpg' 
+    {
+      name: 'Shark Grey',
+      hex: '#4b5563',
+      imageUrl: '/images/models/seal/colors/byd-seal-shark-grey.webp'
     }
   ],
 
@@ -126,7 +126,7 @@ export const sealData: CarModel = {
       name: 'Premium',
       price: 639000000,
       powertrain: 'RWD',
-      imageUrl: 'https://www.byd.com/id/-/media/byd/id/model/seal/byd-seal-premium.jpg',
+      imageUrl: '/images/models/seal/colors/byd-seal-aurora-white.webp',
       performance: {
         acceleration: '5.9 detik',
         topSpeed: '180 km/h' // Assumed based on limits usually set
@@ -149,7 +149,7 @@ export const sealData: CarModel = {
       name: 'Performance',
       price: 750000000,
       powertrain: 'AWD',
-      imageUrl: 'https://www.byd.com/id/-/media/byd/id/model/seal/byd-seal-performance.jpg',
+      imageUrl: '/images/models/seal/colors/byd-seal-cosmos-black.webp',
       performance: {
         acceleration: '3.8 detik',
         topSpeed: '180 km/h'

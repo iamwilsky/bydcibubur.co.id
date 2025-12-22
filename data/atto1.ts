@@ -7,12 +7,12 @@ export const atto1Data: CarModel = {
   tagline: 'Mini EV, Maxi Fun',
   category: CarCategory.HATCHBACK,
   description: 'City car listrik revolusioner dengan teknologi BYD Blade Battery. Desain kompak "Ocean Aesthetics" yang lincah, aman, dan penuh gaya untuk mobilitas perkotaan modern.',
-  startingPrice: 199000000, 
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/atto1.png', // Placeholder asset
+  startingPrice: 199000000,
+  heroImage: '/images/models/atto-1/hero/byd-atto1-hero.webp', // Placeholder asset
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/model/seagull/exterior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/seagull/interior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/seagull/exterior-2.jpg'
+    '/images/models/atto-1/gallery/byd-atto1-gallery-1.webp',
+    '/images/models/atto-1/gallery/byd-atto1-gallery-2.webp',
+    '/images/models/atto-1/gallery/byd-atto1-gallery-3.webp'
   ],
   seats: 4,
   summaryRange: 'Up to 380 km (NEDC)',
@@ -90,9 +90,9 @@ export const atto1Data: CarModel = {
   },
 
   colors: [
-    { name: 'Sprout Green', hex: '#C2D97C' },
-    { name: 'Apricity White', hex: '#F5F5F5' },
-    { name: 'Cosmos Black', hex: '#1A1A1A' }
+    { name: 'Sprout Green', hex: '#C2D97C', imageUrl: '/images/models/atto-1/colors/atto1-sprout-green.webp' },
+    { name: 'Apricity White', hex: '#F5F5F5', imageUrl: '/images/models/atto-1/colors/atto1-apricity-white.webp' },
+    { name: 'Cosmos Black', hex: '#1A1A1A', imageUrl: '/images/models/atto-1/colors/atto1-cosmos-black.webp' }
   ],
 
   variants: [
@@ -101,7 +101,7 @@ export const atto1Data: CarModel = {
       name: 'Dynamic Standard Range',
       price: 199000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/seagull/color-sprout-green.png',
+      imageUrl: '/images/models/atto-1/colors/atto1-sprout-green.webp',
       performance: {
         acceleration: '5.0 detik (0-50 km/h)',
         topSpeed: '130 km/h'
@@ -124,7 +124,7 @@ export const atto1Data: CarModel = {
       name: 'Premium Long Range',
       price: 235000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/seagull/color-apricity-white.png',
+      imageUrl: '/images/models/atto-1/colors/atto1-apricity-white.webp',
       performance: {
         acceleration: '4.9 detik (0-50 km/h)',
         topSpeed: '130 km/h'

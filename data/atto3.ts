@@ -9,11 +9,11 @@ export const atto3Data: CarModel = {
   description: 'Compact Electric SUV yang dinamis dan futuristik. Dilengkapi dengan e-Platform 3.0, Blade Battery, dan interior unik bertema gym yang energik.',
   startingPrice: 390000000,
   // Updated Hero Image
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/atto3-white-fix.png', 
+  heroImage: '/images/models/atto-3/hero/byd-atto3-hero.webp',
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/model/atto-3/exterior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/atto-3/interior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/atto-3/exterior-2.jpg'
+    '/images/models/atto-3/gallery/byd-atto3-gallery-1.webp',
+    '/images/models/atto-3/gallery/byd-atto3-gallery-2.webp',
+    '/images/models/atto-3/gallery/byd-atto3-gallery-3.webp'
   ],
   seats: 5,
   summaryRange: 'Up to 480 km (NEDC)',
@@ -97,11 +97,11 @@ export const atto3Data: CarModel = {
   },
 
   colors: [
-    { name: 'Surf Blue', hex: '#0077BE' },
-    { name: 'Ski White', hex: '#F0F0F0' },
-    { name: 'Boulder Grey', hex: '#808080' },
-    { name: 'Forest Green', hex: '#228B22' },
-    { name: 'Parkour Red', hex: '#C8102E' }
+    { name: 'Surf Blue', hex: '#0077BE', imageUrl: '/images/models/atto-3/colors/atto3-surf-blue.webp' },
+    { name: 'Ski White', hex: '#F0F0F0', imageUrl: '/images/models/atto-3/colors/atto3-ski-white.webp' },
+    { name: 'Boulder Grey', hex: '#808080', imageUrl: '/images/models/atto-3/colors/atto3-boulder-grey.webp' },
+    { name: 'Forest Green', hex: '#228B22', imageUrl: '/images/models/atto-3/colors/atto3-forest-green.webp' },
+    { name: 'Parkour Red', hex: '#C8102E' } // No image for Red found, leaving generic
   ],
 
   variants: [
@@ -110,7 +110,7 @@ export const atto3Data: CarModel = {
       name: 'Standard Range', // Advanced
       price: 390000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/atto-3/color-surf-blue.png',
+      imageUrl: '/images/models/atto-3/colors/atto3-surf-blue.webp',
       performance: {
         acceleration: '7.9 detik',
         topSpeed: '160 km/h'
@@ -132,7 +132,7 @@ export const atto3Data: CarModel = {
       name: 'Extended Range', // Superior
       price: 520000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/atto-3/color-ski-white.png',
+      imageUrl: '/images/models/atto-3/colors/atto3-ski-white.webp',
       performance: {
         acceleration: '7.3 detik',
         topSpeed: '160 km/h'

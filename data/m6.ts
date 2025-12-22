@@ -9,11 +9,11 @@ export const m6Data: CarModel = {
   description: 'MPV Listrik Keluarga 7-Seater pertama di Indonesia. Menghadirkan kenyamanan maksimal, kabin luas, dan teknologi Blade Battery yang aman untuk seluruh keluarga.',
   startingPrice: 383000000,
   // Using generic BYD asset structure placeholder, assume update later with specific image if needed
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/m6-blue-fix-fixed.png', 
+  heroImage: '/images/models/m6/hero/byd-dolphin-hero.webp',
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/model/m6/exterior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/m6/interior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/m6/exterior-2.jpg'
+    '/images/models/m6/gallery/byd-m6-gallery-1.webp',
+    '/images/models/m6/gallery/byd-m6-gallery-2.webp',
+    '/images/models/m6/gallery/byd-m6-gallery-3.webp'
   ],
   seats: 7, // Default to max seats
   summaryRange: 'Up to 530 km (NEDC)',
@@ -95,9 +95,9 @@ export const m6Data: CarModel = {
   },
 
   colors: [
-    { name: 'Ocean Blue', hex: '#0077BE' },
-    { name: 'Sand White', hex: '#F5F5DC' },
-    { name: 'Grey Metallic', hex: '#808080' }
+    { name: 'Ocean Blue', hex: '#0077BE', imageUrl: '/images/models/m6/colors/m6-quartz-blue.webp' },
+    { name: 'Sand White', hex: '#F5F5DC', imageUrl: '/images/models/m6/colors/m6-wheel-white.webp' },
+    { name: 'Grey Metallic', hex: '#808080', imageUrl: '/images/models/m6/colors/m6-harbour-grey.webp' }
   ],
 
   variants: [
@@ -106,7 +106,7 @@ export const m6Data: CarModel = {
       name: 'Standard 7-Seater',
       price: 383000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/m6/color-sand-white.png',
+      imageUrl: '/images/models/m6/colors/m6-wheel-white.webp',
       performance: {
         acceleration: '10.1 detik',
         topSpeed: '180 km/h'
@@ -129,7 +129,7 @@ export const m6Data: CarModel = {
       name: 'Superior 7-Seater',
       price: 423000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/m6/color-grey-metallic.png',
+      imageUrl: '/images/models/m6/colors/m6-harbour-grey.webp',
       performance: {
         acceleration: '8.6 detik',
         topSpeed: '180 km/h'
@@ -152,7 +152,7 @@ export const m6Data: CarModel = {
       name: 'Superior Captain 6-Seater',
       price: 433000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/m6/color-ocean-blue.png',
+      imageUrl: '/images/models/m6/colors/m6-quartz-blue.webp',
       performance: {
         acceleration: '8.6 detik',
         topSpeed: '180 km/h'

@@ -7,13 +7,13 @@ export const sealion7Data: CarModel = {
   tagline: 'Performance Performance SUV',
   category: CarCategory.SUV,
   description: 'SUV Listrik Premium dengan performa tinggi. Menggabungkan kenyamanan keluarga dengan akselerasi sport car, didukung teknologi e-Platform 3.0 dan CTB.',
-  startingPrice: 629000000, 
+  startingPrice: 629000000,
   // Updated Hero Image
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/sealion7-2.png', 
+  heroImage: '/images/models/sealion-7/hero/byd-sealion7-hero.webp',
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/model/sealion-7/exterior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/sealion-7/interior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/sealion-7/performance.jpg'
+    '/images/models/sealion-7/gallery/byd-sealion-gallery-1.webp',
+    '/images/models/sealion-7/gallery/byd-sealion-gallery-2.webp',
+    '/images/models/sealion-7/gallery/byd-sealion-gallery-3.webp'
   ],
   seats: 5,
   summaryRange: 'Up to 567 km (NEDC)',
@@ -101,19 +101,19 @@ export const sealion7Data: CarModel = {
   },
 
   colors: [
-    { name: 'Atlantis Gray', hex: '#5b6269' },
-    { name: 'Aurora White', hex: '#f8fafc' },
-    { name: 'Cosmos Black', hex: '#0f172a' },
-    { name: 'Shark Gray', hex: '#374151' }
+    { name: 'Atlantis Gray', hex: '#5b6269', imageUrl: '/images/models/sealion-7/colors/Sealion7-Atlantis-Grey-fix.webp' },
+    { name: 'Aurora White', hex: '#f8fafc', imageUrl: '/images/models/sealion-7/colors/Sealion7-Aurora-White-fix.webp' },
+    { name: 'Cosmos Black', hex: '#0f172a', imageUrl: '/images/models/sealion-7/colors/Sealion7-Cosmos-Black-fix.webp' },
+    { name: 'Shark Gray', hex: '#374151', imageUrl: '/images/models/sealion-7/colors/Sealion7-Shark-Grey.webp' }
   ],
 
   variants: [
     {
       id: 'premium',
       name: 'Premium',
-      price: 629000000, 
+      price: 629000000,
       powertrain: 'RWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/sealion-7/color-atlantis-grey.png',
+      imageUrl: '/images/models/sealion-7/colors/Sealion7-Atlantis-Grey-fix.webp',
       performance: {
         acceleration: '6.7 detik',
         topSpeed: '215 km/h'
@@ -136,7 +136,7 @@ export const sealion7Data: CarModel = {
       name: 'Performance AWD',
       price: 729000000,
       powertrain: 'AWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/sealion-7/color-cosmos-black.png',
+      imageUrl: '/images/models/sealion-7/colors/Sealion7-Cosmos-Black-fix.webp',
       performance: {
         acceleration: '4.5 detik',
         topSpeed: '225 km/h'

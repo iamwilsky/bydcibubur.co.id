@@ -8,11 +8,11 @@ export const dolphinData: CarModel = {
   category: CarCategory.HATCHBACK,
   description: 'Hatchback listrik yang stylish dengan konsep Ocean Aesthetics. Kombinasi sempurna antara efisiensi, kenyamanan, dan teknologi keamanan canggih untuk mobilitas perkotaan.',
   startingPrice: 369000000, // Updated to start from Dynamic variant
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/dolphin-fix.png',
+  heroImage: '/images/models/dolphin/hero/byd-dolphin-hero.webp',
   gallery: [
-    'https://www.byd.com/content/dam/byd-site/id/model/dolphin/exterior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/dolphin/interior-1.jpg',
-    'https://www.byd.com/content/dam/byd-site/id/model/dolphin/exterior-2.jpg'
+    '/images/models/dolphin/gallery/byd-dolphin-gallery-1.webp',
+    '/images/models/dolphin/gallery/byd-dolphin-gallery-2.webp',
+    '/images/models/dolphin/gallery/byd-dolphin-gallery-3.webp'
   ],
   seats: 5,
   summaryRange: 'Up to 490 km (NEDC)',
@@ -93,10 +93,10 @@ export const dolphinData: CarModel = {
   },
 
   colors: [
-    { name: 'Coral Pink', hex: '#F08080' },
-    { name: 'Sand White', hex: '#F5F5DC' },
-    { name: 'Urban Grey', hex: '#808080' },
-    { name: 'Surf Blue + Black Roof', hex: '#0077BE' },
+    { name: 'Coral Pink', hex: '#F08080', imageUrl: '/images/models/dolphin/colors/dolphin-coral-pink.webp' },
+    { name: 'Sand White', hex: '#F5F5DC', imageUrl: '/images/models/dolphin/colors/dolphin-ski-white.webp' },
+    { name: 'Urban Grey', hex: '#808080', imageUrl: '/images/models/dolphin/colors/dolphin-atlantis-grey.webp' },
+    { name: 'Surf Blue + Black Roof', hex: '#0077BE', imageUrl: '/images/models/dolphin/colors/dolphin-surf-blue.webp' },
     { name: 'Mauve Purple + Black Roof', hex: '#E0B0FF' }
   ],
 
@@ -106,7 +106,7 @@ export const dolphinData: CarModel = {
       name: 'Dynamic Standard Range',
       price: 369000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/dolphin/color-sand-white.png', // Placeholder image
+      imageUrl: '/images/models/dolphin/colors/dolphin-ski-white.webp', // Using White for Dynamic
       performance: {
         acceleration: '12.3 detik',
         topSpeed: '150 km/h'
@@ -129,7 +129,7 @@ export const dolphinData: CarModel = {
       name: 'Premium Extended Range',
       price: 429000000,
       powertrain: 'FWD',
-      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/dolphin/color-surf-blue.png',
+      imageUrl: '/images/models/dolphin/colors/dolphin-surf-blue.webp',
       performance: {
         acceleration: '7.0 detik',
         topSpeed: '160 km/h'
