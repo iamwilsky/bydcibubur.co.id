@@ -7,7 +7,7 @@ export const atto3Data: CarModel = {
   tagline: 'Energy Awakened',
   category: CarCategory.SUV,
   description: 'Compact Electric SUV yang dinamis dan futuristik. Dilengkapi dengan e-Platform 3.0, Blade Battery, dan interior unik bertema gym yang energik.',
-  startingPrice: 515000000,
+  startingPrice: 390000000,
   // Updated Hero Image
   heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/atto3-white-fix.png', 
   gallery: [
@@ -108,7 +108,7 @@ export const atto3Data: CarModel = {
     {
       id: 'standard',
       name: 'Standard Range', // Advanced
-      price: 515000000,
+      price: 390000000,
       powertrain: 'FWD',
       imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/atto-3/color-surf-blue.png',
       performance: {
@@ -130,7 +130,7 @@ export const atto3Data: CarModel = {
     {
       id: 'extended',
       name: 'Extended Range', // Superior
-      price: 569000000,
+      price: 520000000,
       powertrain: 'FWD',
       imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/atto-3/color-ski-white.png',
       performance: {
