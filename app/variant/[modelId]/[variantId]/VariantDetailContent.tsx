@@ -81,7 +81,7 @@ export function VariantDetailContent({ model, variant }: Props) {
                                 />
 
                                 {/* Floating Badge */}
-                                <div className="absolute top-6 left-6 flex flex-col gap-2">
+                                <div className="absolute top-4 left-4 flex flex-col gap-2">
                                     <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full shadow-sm border border-gray-100 dark:border-slate-700 text-slate-900 dark:text-white">
                                         {selectedColor?.name}
                                     </div>
