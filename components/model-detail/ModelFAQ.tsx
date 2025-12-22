@@ -22,7 +22,7 @@ export const ModelFAQ: React.FC<ModelFAQProps> = ({ model }) => {
               Berapa harga OTR {model.name} di Cibubur?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
-              Harga {model.name} dimulai dari {formatPrice(model.startingPrice)}. Harga ini berlaku untuk wilayah Cibubur (Plat B) dan sekitarnya. Hubungi kami untuk rincian diskon dan simulasi kredit.
+              Harga {model.name} dimulai dari {formatPrice(model.startingPrice)}. Harga ini berlaku untuk wilayah Jakarta (Plat B) dan sekitarnya. Hubungi kami untuk rincian diskon dan simulasi kredit.
             </p>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-100 dark:border-slate-700">
