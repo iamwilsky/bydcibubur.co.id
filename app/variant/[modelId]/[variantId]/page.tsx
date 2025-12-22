@@ -51,33 +51,62 @@ export default async function VariantDetailPage({
 
     const jsonLd = {
         '@context': 'https://schema.org',
-        '@type': 'Car',
-        name: `${model.name} ${variant.name}`,
-        image: `https://bydcibubur.co.id${variant.imageUrl || model.heroImage}`,
-        description: `BYD ${model.name} ${variant.name} (${variant.powertrain}). Baterai ${variant.battery.capacity} kWh, Jarak Tempuh ${variant.battery.range}. Akselerasi ${variant.performance.acceleration}.`,
-        brand: {
-            '@type': 'Brand',
-            name: 'BYD',
-        },
-        model: model.name,
-        vehicleConfiguration: `${variant.name} Trim`,
-        manufacturer: {
-            '@type': 'Organization',
-            name: 'BYD Auto',
-        },
-        offers: {
-            '@type': 'Offer',
-            url: `https://bydcibubur.co.id/variant/${model.id}/${variant.id}`,
-            priceCurrency: 'IDR',
-            price: variant.price,
-            itemCondition: 'https://schema.org/NewCondition',
-            availability: variant.soldOut ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
-            seller: {
-                '@type': 'AutoDealer',
-                name: dealerInfo.dealerName,
-                telephone: `+${dealerInfo.salesPhone}`,
+        '@graph': [
+            {
+                '@type': 'Car',
+                name: `${model.name} ${variant.name}`,
+                image: `https://bydcibubur.co.id${variant.imageUrl || model.heroImage}`,
+                description: `BYD ${model.name} ${variant.name} (${variant.powertrain}). Baterai ${variant.battery.capacity} kWh, Jarak Tempuh ${variant.battery.range}. Akselerasi ${variant.performance.acceleration}.`,
+                sku: variant.id,
+                mpn: variant.id,
+                brand: {
+                    '@type': 'Brand',
+                    name: 'BYD',
+                },
+                model: model.name,
+                vehicleConfiguration: `${variant.name} Trim`,
+                manufacturer: {
+                    '@type': 'Organization',
+                    name: 'BYD Auto',
+                },
+                offers: {
+                    '@type': 'Offer',
+                    url: `https://bydcibubur.co.id/variant/${model.id}/${variant.id}`,
+                    priceCurrency: 'IDR',
+                    price: variant.price,
+                    itemCondition: 'https://schema.org/NewCondition',
+                    availability: variant.soldOut ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+                    seller: {
+                        '@type': 'AutoDealer',
+                        '@id': 'https://bydcibubur.co.id/#dealer',
+                        name: dealerInfo.dealerName,
+                    },
+                },
             },
-        },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    {
+                        '@type': 'ListItem',
+                        position: 1,
+                        name: 'Home',
+                        item: 'https://bydcibubur.co.id',
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 2,
+                        name: model.name,
+                        item: `https://bydcibubur.co.id/model/${model.id}`,
+                    },
+                    {
+                        '@type': 'ListItem',
+                        position: 3,
+                        name: `${model.name} ${variant.name}`,
+                        item: `https://bydcibubur.co.id/variant/${model.id}/${variant.id}`,
+                    },
+                ],
+            },
+        ],
     }
 
     return (

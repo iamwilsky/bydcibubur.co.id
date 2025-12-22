@@ -61,43 +61,48 @@ export const metadata: Metadata = {
     }
 }
 
-const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'AutoDealer',
-    name: 'BYD Cibubur (Dealer Resmi)',
-    image: 'https://bydcibubur.co.id/images/models/seal/hero/byd-seal-hero.webp',
-    description: 'Dealer Resmi BYD Cibubur menyediakan penjualan, servis, dan suku cadang mobil listrik BYD.',
-    address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Jl. Alternatif Cibubur No.41, Jatikarya',
-        addressLocality: 'Bekasi',
-        addressRegion: 'Jawa Barat',
-        postalCode: '17435',
-        addressCountry: 'ID'
-    },
-    geo: {
-        '@type': 'GeoCoordinates',
-        latitude: -6.3768, // Approximate, update if specific
-        longitude: 106.9158
-    },
-    url: 'https://bydcibubur.co.id',
-    telephone: '+6282298200029', // Update with real number if available in Constants
-    openingHoursSpecification: [
-        {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-            opens: '08:30',
-            closes: '20:00'
-        }
-    ],
-    priceRange: '$$$'
-}
+import { getDealerInfo } from '@/lib/data'
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
+    const dealerInfo = await getDealerInfo()
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'AutoDealer',
+        '@id': 'https://bydcibubur.co.id/#dealer',
+        name: dealerInfo.dealerName,
+        image: 'https://bydcibubur.co.id/images/models/seal/hero/byd-seal-hero.webp',
+        description: `Dealer Resmi ${dealerInfo.dealerName} menyediakan penjualan, servis, dan suku cadang mobil listrik BYD.`,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: dealerInfo.address,
+            addressLocality: 'Bekasi',
+            addressRegion: 'Jawa Barat',
+            postalCode: '17435',
+            addressCountry: 'ID'
+        },
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: -6.3768,
+            longitude: 106.9158
+        },
+        url: 'https://bydcibubur.co.id',
+        telephone: `+${dealerInfo.salesPhone}`,
+        openingHoursSpecification: [
+            {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                opens: '08:30',
+                closes: '20:00'
+            }
+        ],
+        priceRange: '$$$'
+    }
+
     return (
         <html lang="id" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
             <head>

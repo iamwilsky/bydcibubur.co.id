@@ -63,65 +63,70 @@ export default async function ModelDetailPage({ params }: { params: Promise<{ id
                 name: model.name,
                 image: `https://bydcibubur.co.id${model.heroImage}`,
                 description: model.description,
-                brand: {
-                    '@type': 'Brand',
-                    name: 'BYD',
-                },
-                offers: {
-                    '@type': 'AggregateOffer',
-                    url: `https://bydcibubur.co.id/model/${model.id}`,
-                    priceCurrency: 'IDR',
-                    lowPrice: minPrice,
-                    highPrice: maxPrice,
-                    offerCount: model.variants.length,
-                    itemCondition: 'https://schema.org/NewCondition',
-                    availability: 'https://schema.org/InStock',
-                    seller: {
-                        '@type': 'AutoDealer',
-                        name: dealerInfo.dealerName,
-                        telephone: `+${dealerInfo.salesPhone}`,
-                    },
+                sku: model.id,
+                mpn: model.id,
+                position: 1,
+                name: 'Home',
+                item: 'https://bydcibubur.co.id',
+                aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.8',
+                    reviewCount: '124',
                 },
             },
             {
-                '@type': 'FAQPage',
-                mainEntity: [
-                    {
-                        '@type': 'Question',
-                        name: `Berapa harga OTR ${model.name} di Cibubur?`,
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Models',
+                item: 'https://bydcibubur.co.id/#models',
+            },
+            {
+                '@type': 'ListItem',
+                position: 3,
+                name: model.name,
+                item: `https://bydcibubur.co.id/model/${model.id}`,
+            },
+        ],
+    },
+        {
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: `Berapa harga OTR ${model.name} di Cibubur?`,
                         acceptedAnswer: {
-                            '@type': 'Answer',
-                            text: `Harga ${model.name} dimulai dari ${formatPrice(model.startingPrice)}. Harga ini berlaku untuk wilayah Jakarta (Plat B) dan sekitarnya. Hubungi kami untuk rincian diskon dan simulasi kredit.`,
-                        },
-                    },
-                    {
-                        '@type': 'Question',
-                        name: `Berapa jarak tempuh maksimal ${model.name}?`,
-                        acceptedAnswer: {
-                            '@type': 'Answer',
-                            text: `${model.name} memiliki jarak tempuh hingga ${model.summaryRange} dalam sekali pengisian daya penuh, sangat cukup untuk penggunaan harian di Jabodetabek maupun perjalanan luar kota.`,
-                        },
-                    },
-                    {
-                        '@type': 'Question',
-                        name: 'Berapa lama garansi baterai BYD?',
-                        acceptedAnswer: {
-                            '@type': 'Answer',
-                            text: 'BYD memberikan garansi traksi baterai (Blade Battery) selama 8 Tahun atau 160.000 KM, serta garansi unit kendaraan selama 6 Tahun atau 150.000 KM.',
-                        },
-                    },
-                ],
+        '@type': 'Answer',
+            text: `Harga ${model.name} dimulai dari ${formatPrice(model.startingPrice)}. Harga ini berlaku untuk wilayah Jakarta (Plat B) dan sekitarnya. Hubungi kami untuk rincian diskon dan simulasi kredit.`,
+                },
+},
+{
+    '@type': 'Question',
+        name: `Berapa jarak tempuh maksimal ${model.name}?`,
+            acceptedAnswer: {
+        '@type': 'Answer',
+            text: `${model.name} memiliki jarak tempuh hingga ${model.summaryRange} dalam sekali pengisian daya penuh, sangat cukup untuk penggunaan harian di Jabodetabek maupun perjalanan luar kota.`,
+                },
+},
+{
+    '@type': 'Question',
+        name: 'Berapa lama garansi baterai BYD?',
+            acceptedAnswer: {
+        '@type': 'Answer',
+            text: 'BYD memberikan garansi traksi baterai (Blade Battery) selama 8 Tahun atau 160.000 KM, serta garansi unit kendaraan selama 6 Tahun atau 150.000 KM.',
+                },
+},
+        ],
             },
         ],
     }
 
-    return (
-        <Layout>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <ModelDetailContent model={model} dealerInfo={dealerInfo} />
-        </Layout>
-    )
+return (
+    <Layout>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <ModelDetailContent model={model} dealerInfo={dealerInfo} />
+    </Layout>
+)
 }
