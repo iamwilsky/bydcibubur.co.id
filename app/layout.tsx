@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         siteName: 'BYD Cibubur',
         images: [
             {
-                url: '/images/og-image.jpg', // Ensure this exists or use a generic one
+                url: '/images/og-image.webp', // Ensure this exists or use a generic one
                 width: 1200,
                 height: 630,
             }
