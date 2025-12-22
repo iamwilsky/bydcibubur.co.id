@@ -63,6 +63,11 @@ export default async function VariantDetailPage({
                     '@type': 'Brand',
                     name: 'BYD',
                 },
+                aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.8',
+                    reviewCount: '124',
+                },
                 model: model.name,
                 vehicleConfiguration: `${variant.name} Trim`,
                 manufacturer: {
