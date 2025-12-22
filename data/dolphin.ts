@@ -7,9 +7,8 @@ export const dolphinData: CarModel = {
   tagline: 'Agile & Free',
   category: CarCategory.HATCHBACK,
   description: 'Hatchback listrik yang stylish dengan konsep Ocean Aesthetics. Kombinasi sempurna antara efisiensi, kenyamanan, dan teknologi keamanan canggih untuk mobilitas perkotaan.',
-  startingPrice: 429000000,
-  // Standard BYD asset pattern
-  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/dolphin-fix.png', 
+  startingPrice: 369000000, // Updated to start from Dynamic variant
+  heroImage: 'https://www.byd.com/content/dam/byd-site/id/pricelist/dolphin-fix.png',
   gallery: [
     'https://www.byd.com/content/dam/byd-site/id/model/dolphin/exterior-1.jpg',
     'https://www.byd.com/content/dam/byd-site/id/model/dolphin/interior-1.jpg',
@@ -20,75 +19,76 @@ export const dolphinData: CarModel = {
   summaryPowertrain: 'FWD',
 
   dimensions: {
-    length: 4290,
+    length: 4150, // User provided
     width: 1770,
     height: 1570,
     wheelbase: 2700,
     turningRadius: 5.25,
-    groundClearance: 150
+    groundClearance: 155
   },
 
   trunk: {
-    rear: 345 // Standard trunk space
+    rear: 345
   },
 
   battery: {
     type: 'BYD Blade Battery (LFP)',
-    capacity: 60.48,
+    capacity: 60.48, // Max capacity shown in specs
     technology: 'e-Platform 3.0',
     charging: {
-      ac: '7kW (Type 2)',
-      dc: '60kW (CCS2)',
-      features: ['V2L Support (3.3kW)']
+      ac: 'Type 2 AC',
+      dc: 'CCS2 DC Fast Charging',
+      features: ['V2L Support']
     }
   },
 
   chassis: {
     frontSuspension: 'MacPherson Strut',
-    rearSuspension: 'Torsion Beam',
+    rearSuspension: 'Multi-Link (Premium) / Torsion Beam (Dynamic)',
     frontBrakes: 'Ventilated Disc',
-    rearBrakes: 'Solid Disc',
-    wheels: ['16" Alloy'],
-    tyres: '195/60 R16'
+    rearBrakes: 'Disc',
+    wheels: ['16" Alloy (Dynamic)', '17" Alloy (Premium)'],
+    tyres: '195/60 R16 (Dynamic) / 205/50 R17 (Premium)'
   },
 
   features: {
     safety: [
-      '6 Airbags',
+      '6 Airbags (Front, Side, Curtain)',
       'Adaptive Cruise Control (ACC)',
       'Automatic Emergency Braking (AEB)',
       'Lane Keeping Assist (LKA) & Departure Warning (LDW)',
       'Blind Spot Detection (BSD)',
       'Rear Cross Traffic Alert & Brake (RCTA & RCTB)',
-      '360° Camera + 3D View',
+      '360° Camera',
       'Electronic Stability Control (ESC)',
-      'Auto Hold & Hill Start Assist',
-      'Tyre Pressure Monitoring System (TPMS)'
+      'Traction Control System (TCS)',
+      'Auto Hold & Electric Parking Brake'
     ],
     interior: [
       'Layar Sentuh 12.8” Rotating',
-      'Instrument Cluster Digital 5”',
-      'Panoramic Sunroof',
-      'Jok Vegan Leather',
-      'Electric Adjustable Front Seats',
-      'Ventilated & Heated Front Seats',
-      'Wireless Charger',
-      'Ambient Light 31 Warna',
-      'PM2.5 Filter + CN95',
-      'Voice Command (Bahasa Indonesia)'
+      'Panoramic Glass Roof (Premium)',
+      'Electric Adjustable Front Seats (Premium)',
+      'Ventilated Front Seats (Premium)',
+      'Wireless Charger (Premium)',
+      'Ambient Interior Lighting',
+      'Leather Steering Wheel',
+      'Spacious Rear Seat with Foldable Backrest'
     ],
     exterior: [
-      'LED Headlights & Taillights',
-      'Crystal Design Headlamp',
-      'One-piece Through LED Rear Lamp',
-      'Electric Adjustable & Retractable Mirrors',
-      'Two-tone Color (Varian tertentu)'
+      'Crystal LED Combination Headlights',
+      'LED Tail Light',
+      'Dynamic Alloy Wheels',
+      'Shark Fin Antenna',
+      'NFC Side Mirror',
+      'Panoramic Glass Roof (Fixed) [Premium only]'
     ],
     infotainment: [
-      '8 Speaker Audio System',
-      'Bluetooth Phone & Audio',
-      'Voice Assistant (Bahasa Indonesia)',
-      'USB-C & USB-A (Depan & Belakang)'
+      '12.8-inch Intelligent Rotating Touch Screen',
+      '6 Dynamic Speakers',
+      'Bluetooth Connectivity',
+      'USB Charging Ports',
+      'Voice Assistant',
+      'Apple CarPlay & Android Auto'
     ]
   },
 
@@ -102,8 +102,31 @@ export const dolphinData: CarModel = {
 
   variants: [
     {
-      id: 'extended',
-      name: 'Premium Extended',
+      id: 'dynamic',
+      name: 'Dynamic Standard Range',
+      price: 369000000,
+      powertrain: 'FWD',
+      imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/dolphin/color-sand-white.png', // Placeholder image
+      performance: {
+        acceleration: '12.3 detik',
+        topSpeed: '150 km/h'
+      },
+      motor: {
+        type: 'Permanent Magnet Synchronous Motor',
+        maxPower: '70 kW (95 PS)',
+        maxTorque: '180 Nm',
+        layout: 'FWD'
+      },
+      battery: {
+        capacity: 44.9,
+        range: '340 km (WLTP)'
+      },
+      weight: 1525, // Estimasi
+      features: ['Torsion Beam Rear Suspension', '16-inch Wheels', 'Range 340 km (WLTP)', '70kW Motor']
+    },
+    {
+      id: 'premium',
+      name: 'Premium Extended Range',
       price: 429000000,
       powertrain: 'FWD',
       imageUrl: 'https://www.byd.com/content/dam/byd-site/id/model/dolphin/color-surf-blue.png',
@@ -119,10 +142,10 @@ export const dolphinData: CarModel = {
       },
       battery: {
         capacity: 60.48,
-        range: '427 km (WLTP) / 490 km (NEDC)'
+        range: '427 km (WLTP)'
       },
       weight: 1658,
-      features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charger']
+      features: ['Multi-Link Rear Suspension', '17-inch Wheels', 'Panoramic Glass Roof', 'Ventilated Seats', '150kW Motor']
     }
   ]
 };
