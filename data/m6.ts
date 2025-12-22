@@ -95,9 +95,10 @@ export const m6Data: CarModel = {
   },
 
   colors: [
-    { name: 'Ocean Blue', hex: '#0077BE', imageUrl: '/images/models/m6/colors/m6-quartz-blue.webp' },
-    { name: 'Sand White', hex: '#F5F5DC', imageUrl: '/images/models/m6/colors/m6-wheel-white.webp' },
-    { name: 'Grey Metallic', hex: '#808080', imageUrl: '/images/models/m6/colors/m6-harbour-grey.webp' }
+    { name: 'Crystal White', hex: '#F5F5DC', imageUrl: '/images/models/m6/colors/M6-crystal-white.webp' },
+    { name: 'Cosmos Black', hex: '#1A1A1A', imageUrl: '/images/models/m6/colors/M6-cosmos-black.webp' },
+    { name: 'Quartz Blue', hex: '#0077BE', imageUrl: '/images/models/m6/colors/M6-quartz-blue.webp' },
+    { name: 'Harbour Grey', hex: '#808080', imageUrl: '/images/models/m6/colors/M6-harbour-grey.webp' }
   ],
 
   variants: [
@@ -106,7 +107,7 @@ export const m6Data: CarModel = {
       name: 'Standard 7-Seater',
       price: 383000000,
       powertrain: 'FWD',
-      imageUrl: '/images/models/m6/colors/m6-wheel-white.webp',
+      imageUrl: '/images/models/m6/colors/M6-crystal-white.webp',
       performance: {
         acceleration: '10.1 detik',
         topSpeed: '180 km/h'
@@ -129,7 +130,7 @@ export const m6Data: CarModel = {
       name: 'Superior 7-Seater',
       price: 423000000,
       powertrain: 'FWD',
-      imageUrl: '/images/models/m6/colors/m6-harbour-grey.webp',
+      imageUrl: '/images/models/m6/colors/M6-harbour-grey.webp',
       performance: {
         acceleration: '8.6 detik',
         topSpeed: '180 km/h'
@@ -152,7 +153,7 @@ export const m6Data: CarModel = {
       name: 'Superior Captain 6-Seater',
       price: 433000000,
       powertrain: 'FWD',
-      imageUrl: '/images/models/m6/colors/m6-quartz-blue.webp',
+      imageUrl: '/images/models/m6/colors/M6-quartz-blue.webp',
       performance: {
         acceleration: '8.6 detik',
         topSpeed: '180 km/h'
