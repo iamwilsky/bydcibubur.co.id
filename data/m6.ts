@@ -9,7 +9,8 @@ export const m6Data: CarModel = {
   description: 'MPV Listrik Keluarga 7-Seater pertama di Indonesia. Menghadirkan kenyamanan maksimal, kabin luas, dan teknologi Blade Battery yang aman untuk seluruh keluarga.',
   startingPrice: 383000000,
   // Using generic BYD asset structure placeholder, assume update later with specific image if needed
-  heroImage: '/images/models/m6/hero/byd-dolphin-hero.webp',
+  heroImage: '/images/models/m6/hero/byd-m6-hero.webp',
+  youtubeVideoId: '-Le4UQwEj00',
   gallery: [
     '/images/models/m6/gallery/byd-m6-gallery-1.webp',
     '/images/models/m6/gallery/byd-m6-gallery-2.webp',

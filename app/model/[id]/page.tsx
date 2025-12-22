@@ -28,7 +28,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return {
         title: `Harga ${model.name} OTR Cibubur - Spesifikasi & Promo Terbaru | ${dealerInfo.dealerName}`,
         description: `Dapatkan penawaran terbaik ${model.name} di BYD Cibubur. Jarak tempuh ${model.summaryRange}. Cicilan ringan, test drive tersedia. Hubungi ${dealerInfo.salesName}.`,
-        keywords: [model.name, 'Harga ' + model.name, model.name + ' OTR', 'BYD Cibubur'],
+        keywords: [model.name, 'Harga ' + model.name, model.name + ' OTR', 'BYD Cibubur', `Promo ${model.name} Cibubur`],
+        alternates: {
+            canonical: `https://bydcibubur.co.id/model/${model.id}`,
+        },
         openGraph: {
             title: `${model.name} | ${dealerInfo.dealerName}`,
             description: model.description,
@@ -46,8 +49,36 @@ export default async function ModelDetailPage({ params }: { params: Promise<{ id
         notFound()
     }
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Car',
+        name: model.name,
+        image: `https://bydcibubur.co.id${model.heroImage}`,
+        description: model.description,
+        brand: {
+            '@type': 'Brand',
+            name: 'BYD',
+        },
+        offers: {
+            '@type': 'Offer',
+            url: `https://bydcibubur.co.id/model/${model.id}`,
+            priceCurrency: 'IDR',
+            price: model.startingPrice,
+            itemCondition: 'https://schema.org/NewCondition',
+            availability: 'https://schema.org/InStock',
+            seller: {
+                '@type': 'AutoDealer',
+                name: dealerInfo.dealerName,
+            },
+        },
+    }
+
     return (
         <Layout>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <ModelDetailContent model={model} dealerInfo={dealerInfo} />
         </Layout>
     )

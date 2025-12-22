@@ -10,6 +10,7 @@ export const atto3Data: CarModel = {
   startingPrice: 390000000,
   // Updated Hero Image
   heroImage: '/images/models/atto-3/hero/byd-atto3-hero.webp',
+  youtubeVideoId: '-ingY0nViWY',
   gallery: [
     '/images/models/atto-3/gallery/byd-atto3-gallery-1.webp',
     '/images/models/atto-3/gallery/byd-atto3-gallery-2.webp',

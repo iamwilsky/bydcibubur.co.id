@@ -99,7 +99,7 @@ export const ModelHero: React.FC<ModelHeroProps> = ({ model }) => {
 
             <img
               src={model.heroImage}
-              alt={model.name}
+              alt={`BYD ${model.name} - ${model.category} Listrik Cibubur`}
               className="w-full h-auto object-contain drop-shadow-2xl animate-fade-in-up"
             />
           </div>

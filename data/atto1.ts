@@ -9,6 +9,7 @@ export const atto1Data: CarModel = {
   description: 'City car listrik revolusioner dengan teknologi BYD Blade Battery. Desain kompak "Ocean Aesthetics" yang lincah, aman, dan penuh gaya untuk mobilitas perkotaan modern.',
   startingPrice: 199000000,
   heroImage: '/images/models/atto-1/hero/byd-atto1-hero.webp', // Placeholder asset
+  youtubeVideoId: 'zV0LOFXWRz4',
   gallery: [
     '/images/models/atto-1/gallery/byd-atto1-gallery-1.webp',
     '/images/models/atto-1/gallery/byd-atto1-gallery-2.webp',

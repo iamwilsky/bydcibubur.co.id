@@ -9,6 +9,7 @@ export const dolphinData: CarModel = {
   description: 'Hatchback listrik yang stylish dengan konsep Ocean Aesthetics. Kombinasi sempurna antara efisiensi, kenyamanan, dan teknologi keamanan canggih untuk mobilitas perkotaan.',
   startingPrice: 369000000, // Updated to start from Dynamic variant
   heroImage: '/images/models/dolphin/hero/byd-dolphin-hero.webp',
+  youtubeVideoId: 'ykdQLi5jXXM',
   gallery: [
     '/images/models/dolphin/gallery/byd-dolphin-gallery-1.webp',
     '/images/models/dolphin/gallery/byd-dolphin-gallery-2.webp',

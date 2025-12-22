@@ -9,7 +9,7 @@ export const sealData: CarModel = {
   description: 'Winner of the iF Design Award. A masterpiece of ocean aesthetics and aerodynamic performance. The BYD Seal redefines the electric sports sedan.',
   startingPrice: 639000000,
   heroImage: '/images/models/seal/hero/byd-seal-hero.webp',
-  youtubeVideoId: 'S4wK0j4s7V0', // Official BYD Seal Video ID
+  youtubeVideoId: '50PU-cQx7j0', // Official BYD Seal Video ID
   gallery: [
     '/images/models/seal/gallery/byd-seal-gallery-1.webp',
     '/images/models/seal/gallery/byd-seal-gallery-2.webp',

@@ -10,6 +10,7 @@ export const sealion7Data: CarModel = {
   startingPrice: 629000000,
   // Updated Hero Image
   heroImage: '/images/models/sealion-7/hero/byd-sealion7-hero.webp',
+  youtubeVideoId: 'qZ98chlK034',
   gallery: [
     '/images/models/sealion-7/gallery/byd-sealion-gallery-1.webp',
     '/images/models/sealion-7/gallery/byd-sealion-gallery-2.webp',
