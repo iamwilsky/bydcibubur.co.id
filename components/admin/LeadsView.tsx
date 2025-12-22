@@ -125,12 +125,12 @@ export const LeadsView: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden animate-fade-in">
-        <div className="p-6 border-b border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <h3 className="text-lg font-bold font-display">Inquiry & Leads</h3>
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden animate-fade-in transition-colors duration-300">
+        <div className="p-6 border-b border-gray-100 dark:border-slate-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <h3 className="text-lg font-bold font-display text-slate-900 dark:text-white">Inquiry & Leads</h3>
           <button
             onClick={downloadCSV}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-50 text-teal-600 rounded-lg text-sm font-bold hover:bg-teal-100 transition-colors w-full md:w-auto justify-center"
+            className="flex items-center gap-2 px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg text-sm font-bold hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors w-full md:w-auto justify-center"
           >
             <Save className="w-4 h-4" /> Export CSV
           </button>
@@ -140,7 +140,7 @@ export const LeadsView: React.FC = () => {
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-gray-50 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <tr className="bg-gray-50 dark:bg-slate-700/50 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 <th className="p-4">Customer Name</th>
                 <th className="p-4">Model Interest</th>
                 <th className="p-4">Phone</th>
@@ -149,25 +149,25 @@ export const LeadsView: React.FC = () => {
                 <th className="p-4 text-center">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-gray-100 dark:divide-slate-700">
               {leads.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="p-8 text-center text-gray-500">No leads available yet.</td>
+                  <td colSpan={6} className="p-8 text-center text-gray-500 dark:text-gray-400">No leads available yet.</td>
                 </tr>
               ) : (
                 leads.map((lead) => (
-                  <tr key={lead.id} className="hover:bg-gray-50 transition-colors group">
-                    <td className="p-4 font-bold text-slate-900">{lead.name}</td>
-                    <td className="p-4 text-sm text-gray-600">{lead.model}</td>
-                    <td className="p-4 text-sm font-mono text-gray-600">{lead.phone}</td>
-                    <td className="p-4 text-sm text-gray-500">{lead.date}</td>
+                  <tr key={lead.id} className="hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors group">
+                    <td className="p-4 font-bold text-slate-900 dark:text-white">{lead.name}</td>
+                    <td className="p-4 text-sm text-gray-600 dark:text-gray-300">{lead.model}</td>
+                    <td className="p-4 text-sm font-mono text-gray-600 dark:text-gray-300">{lead.phone}</td>
+                    <td className="p-4 text-sm text-gray-500 dark:text-gray-400">{lead.date}</td>
                     <td className="p-4">
                       {/* Interactive Status Dropdown in Table */}
                       <div className="relative">
                         <select
                           value={lead.status}
                           onChange={(e) => handleQuickStatusUpdate(lead.id, e.target.value as any)}
-                          className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-slate-300 pr-6 ${getStatusColor(lead.status)}`}
+                          className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-slate-300 dark:focus:ring-slate-600 pr-6 ${getStatusColor(lead.status)}`}
                         >
                           <option value="New">New</option>
                           <option value="Contacted">Contacted</option>
@@ -193,7 +193,7 @@ export const LeadsView: React.FC = () => {
 
                       <button
                         onClick={() => openLeadModal(lead)}
-                        className="p-2 rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 hover:text-slate-900 transition-colors"
+                        className="p-2 rounded-lg border border-gray-200 dark:border-slate-600 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-4 h-4" />
@@ -209,15 +209,15 @@ export const LeadsView: React.FC = () => {
         {/* Mobile Card View (Hidden on Desktop) */}
         <div className="md:hidden">
           {leads.length === 0 ? (
-            <div className="p-8 text-center text-gray-500">No leads available yet.</div>
+            <div className="p-8 text-center text-gray-500 dark:text-gray-400">No leads available yet.</div>
           ) : (
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y divide-gray-100 dark:divide-slate-700">
               {leads.map((lead) => (
-                <div key={lead.id} className="p-4 hover:bg-gray-50 transition-colors">
+                <div key={lead.id} className="p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h4 className="font-bold text-slate-900">{lead.name}</h4>
-                      <div className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                      <h4 className="font-bold text-slate-900 dark:text-white">{lead.name}</h4>
+                      <div className="text-xs text-gray-400 dark:text-gray-500 flex items-center gap-1 mt-1">
                         <Calendar className="w-3 h-3" /> {lead.date}
                       </div>
                     </div>
@@ -237,16 +237,16 @@ export const LeadsView: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="text-sm text-gray-600 mb-2">{lead.model}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{lead.model}</div>
 
-                  <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
-                    <div className="text-sm font-mono text-gray-500 flex items-center gap-1">
+                  <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100 dark:border-slate-700">
+                    <div className="text-sm font-mono text-gray-500 dark:text-gray-400 flex items-center gap-1">
                       <Phone className="w-3 h-3" /> {lead.phone}
                     </div>
                     <div className="flex gap-2">
                       <button
                         onClick={() => openLeadModal(lead)}
-                        className="px-3 py-2 bg-gray-100 text-slate-700 rounded-lg text-xs font-bold uppercase tracking-wider"
+                        className="px-3 py-2 bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-bold uppercase tracking-wider"
                       >
                         Manage
                       </button>
@@ -268,44 +268,44 @@ export const LeadsView: React.FC = () => {
 
       {/* Edit/View Modal */}
       <Dialog open={isModalOpen} onClose={() => setIsModalOpen(false)} className="relative z-50">
-        <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" aria-hidden="true" />
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <Dialog.Panel className="mx-auto max-w-sm w-full bg-white rounded-xl shadow-xl overflow-hidden">
-            <div className="flex justify-between items-center p-4 border-b border-gray-100">
-              <Dialog.Title className="text-lg font-bold font-display text-slate-900">Manage Lead</Dialog.Title>
-              <button onClick={() => setIsModalOpen(false)}><X className="w-5 h-5 text-gray-400 hover:text-slate-900" /></button>
+          <Dialog.Panel className="mx-auto max-w-sm w-full bg-white dark:bg-slate-800 rounded-xl shadow-xl overflow-hidden transition-colors duration-300 border border-gray-100 dark:border-slate-700">
+            <div className="flex justify-between items-center p-4 border-b border-gray-100 dark:border-slate-700">
+              <Dialog.Title className="text-lg font-bold font-display text-slate-900 dark:text-white">Manage Lead</Dialog.Title>
+              <button onClick={() => setIsModalOpen(false)}><X className="w-5 h-5 text-gray-400 hover:text-slate-900 dark:hover:text-white" /></button>
             </div>
 
             {selectedLead && (
               <div className="p-6 space-y-4">
                 <div>
-                  <label className="text-xs font-bold uppercase text-gray-400 mb-1 block">Customer Name</label>
+                  <label className="text-xs font-bold uppercase text-gray-400 dark:text-gray-500 mb-1 block">Customer Name</label>
                   <input
                     type="text"
                     value={editForm.name}
                     onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-200 dark:border-slate-600 dark:bg-slate-700 rounded-lg text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
-                  <p className="text-xs text-gray-400 mt-1 pl-1">{selectedLead.phone}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 pl-1">{selectedLead.phone}</p>
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold uppercase text-gray-400 mb-1 block">Interest / Model</label>
+                  <label className="text-xs font-bold uppercase text-gray-400 dark:text-gray-500 mb-1 block">Interest / Model</label>
                   <input
                     type="text"
                     value={editForm.model}
                     onChange={(e) => setEditForm({ ...editForm, model: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 border border-gray-200 dark:border-slate-600 dark:bg-slate-700 rounded-lg text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
-                  <p className="text-xs text-gray-400 mt-1 pl-1">Via {selectedLead.source}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 pl-1">Via {selectedLead.source}</p>
                 </div>
 
                 <div className="pt-2">
-                  <label className="text-xs font-bold uppercase text-gray-400 mb-2 block">Update Status</label>
+                  <label className="text-xs font-bold uppercase text-gray-400 dark:text-gray-500 mb-2 block">Update Status</label>
                   <select
                     value={editForm.status}
                     onChange={(e) => setEditForm({ ...editForm, status: e.target.value as any })}
-                    className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-900"
+                    className="w-full px-3 py-2 bg-gray-50 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-900 dark:text-white"
                   >
                     <option value="New">New</option>
                     <option value="Contacted">Contacted</option>
@@ -315,7 +315,7 @@ export const LeadsView: React.FC = () => {
                   </select>
                 </div>
 
-                <div className="flex gap-3 pt-4 mt-2 border-t border-gray-100">
+                <div className="flex gap-3 pt-4 mt-2 border-t border-gray-100 dark:border-slate-700">
                   <button
                     onClick={handleUpdateLead}
                     disabled={isDeleting}
@@ -326,7 +326,7 @@ export const LeadsView: React.FC = () => {
                   <button
                     onClick={handleDelete}
                     disabled={isDeleting}
-                    className="px-4 py-2 bg-red-50 text-red-600 rounded-lg font-bold text-sm hover:bg-red-100 flex items-center gap-2 disabled:opacity-50"
+                    className="px-4 py-2 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-lg font-bold text-sm hover:bg-red-100 dark:hover:bg-red-900/20 flex items-center gap-2 disabled:opacity-50"
                   >
                     {isDeleting ? (
                       'Deleting...'
@@ -339,7 +339,7 @@ export const LeadsView: React.FC = () => {
                 {/* Quick Action in Modal */}
                 <button
                   onClick={() => handleWhatsAppClick(selectedLead)}
-                  className="w-full mt-2 py-2 bg-gray-100 text-slate-700 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-200"
+                  className="w-full mt-2 py-2 bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
                 >
                   Send Follow-up Message
                 </button>

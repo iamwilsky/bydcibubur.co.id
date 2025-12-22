@@ -67,17 +67,17 @@ export const DashboardView: React.FC = () => {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <h3 className="text-lg font-bold mb-6 font-display">Recent Activity</h3>
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-colors duration-300">
+        <h3 className="text-lg font-bold mb-6 font-display text-slate-900 dark:text-white">Recent Activity</h3>
         <div className="space-y-6">
           {leads.slice(0, 5).map((lead) => (
-            <div key={lead.id} className="flex items-center gap-4 pb-4 border-b border-gray-50 last:border-0 last:pb-0">
-              <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-600">
+            <div key={lead.id} className="flex items-center gap-4 pb-4 border-b border-gray-50 dark:border-slate-700 last:border-0 last:pb-0">
+              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300">
                 {lead.name.charAt(0).toUpperCase()}
               </div>
               <div className="flex-1">
-                <p className="font-bold text-sm text-slate-900">{lead.name} <span className="font-normal text-gray-500">request penawaran untuk</span> {lead.model}</p>
-                <p className="text-xs text-gray-400">{lead.date} • via {lead.source}</p>
+                <p className="font-bold text-sm text-slate-900 dark:text-white">{lead.name} <span className="font-normal text-gray-500 dark:text-gray-400">request penawaran untuk</span> {lead.model}</p>
+                <p className="text-xs text-gray-400 dark:text-gray-500">{lead.date} • via {lead.source}</p>
               </div>
               <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full ${getStatusColor(lead.status)}`}>
                 {lead.status}
@@ -85,7 +85,7 @@ export const DashboardView: React.FC = () => {
             </div>
           ))}
           {leads.length === 0 && (
-            <p className="text-gray-500 text-sm">No recent activity.</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">No recent activity.</p>
           )}
         </div>
       </div>
