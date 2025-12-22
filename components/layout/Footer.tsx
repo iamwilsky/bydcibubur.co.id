@@ -54,16 +54,18 @@ export const Footer: React.FC = () => {
                 <Phone className="w-5 h-5 text-teal-500 flex-shrink-0" />
                 <span>{dealerInfo.displayPhone} ({dealerInfo.salesName})</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5 text-teal-500 flex-shrink-0" />
-                <span>{dealerInfo.email}</span>
-              </li>
+
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} {dealerInfo.dealerName}. All rights reserved.</p>
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <p>&copy; {new Date().getFullYear()} {dealerInfo.dealerName}. All rights reserved.</p>
+            <p className="text-xs text-gray-600">
+              Developed by <a href="https://webchain.id/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 transition-colors">Webchain Indonesia</a>
+            </p>
+          </div>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

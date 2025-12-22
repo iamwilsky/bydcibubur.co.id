@@ -25,6 +25,33 @@ export function VariantDetailContent({ model, variant }: Props) {
         openModal(`Download Brochure - ${model.name}`)
     }
 
+    // Share Functionality
+    const handleShare = async () => {
+        const shareData = {
+            title: `BYD ${model.name} ${variant.name}`,
+            text: `Lihat spesifikasi dan harga BYD ${model.name} ${variant.name} di BYD Cibubur.`,
+            url: window.location.href,
+        }
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData)
+            } catch (err) {
+                // User cancelled or share failed
+                console.log('Share cancelled or failed', err)
+            }
+        } else {
+            // Fallback to clipboard
+            try {
+                await navigator.clipboard.writeText(window.location.href)
+                // You might want to use a toast notification here if available
+                alert('Link halaman telah disalin ke clipboard!')
+            } catch (err) {
+                console.error('Failed to copy', err)
+            }
+        }
+    }
+
     // Logic to display correct image: Selected Color Image > Variant Default Image > Model Hero
     const displayImage = selectedColor?.imageUrl || variant.imageUrl || model.heroImage
 
@@ -85,6 +112,13 @@ export function VariantDetailContent({ model, variant }: Props) {
                             </h1>
                             <div className="flex items-center gap-3">
                                 <span className="text-xl md:text-2xl text-gray-400 font-light uppercase tracking-widest">{variant.name}</span>
+                                <button
+                                    onClick={handleShare}
+                                    className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-500 dark:text-gray-400 hover:bg-teal-50 hover:text-teal-600 transition-all active:scale-95"
+                                    aria-label="Share"
+                                >
+                                    <Share2 className="w-4 h-4" />
+                                </button>
                             </div>
 
                             <div className="mt-6 pt-6 border-t border-gray-100 dark:border-slate-700">
@@ -198,7 +232,12 @@ export function VariantDetailContent({ model, variant }: Props) {
                                 >
                                     <Download className="w-4 h-4" /> E-Brochure
                                 </Button>
-                                <Button fullWidth variant="outline" className="flex items-center gap-2 justify-center py-4 dark:border-slate-600 dark:text-gray-300 dark:hover:bg-slate-800">
+                                <Button
+                                    fullWidth
+                                    variant="outline"
+                                    onClick={handleShare}
+                                    className="flex items-center gap-2 justify-center py-4 dark:border-slate-600 dark:text-gray-300 dark:hover:bg-slate-800"
+                                >
                                     <Share2 className="w-4 h-4" /> Bagikan
                                 </Button>
                             </div>
