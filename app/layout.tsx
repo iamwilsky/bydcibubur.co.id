@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
     metadataBase: new URL('https://bydcibubur.co.id'),
     alternates: {
-        canonical: '/',
+        canonical: './',
     },
     title: {
         default: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD - Sealion 7, Seal, Atto 3, Dolphin',
