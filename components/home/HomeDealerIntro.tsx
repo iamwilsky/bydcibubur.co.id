@@ -44,7 +44,7 @@ export const HomeDealerIntro: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="mt-8">
+                        <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <Button
                                 onClick={() => openModal('Info Dealer BYD Cibubur')}
                                 variant="primary"
@@ -53,6 +53,12 @@ export const HomeDealerIntro: React.FC = () => {
                             >
                                 Hubungi Kami Sekarang
                             </Button>
+                            <a
+                                href="/tentang-byd-cibubur"
+                                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+                            >
+                                Profil Dealer
+                            </a>
                         </div>
                     </div>
 

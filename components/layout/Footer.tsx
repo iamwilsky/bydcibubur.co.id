@@ -33,8 +33,9 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-4 md:col-start-6">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Models</h3>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Navigasi</h3>
             <ul className="space-y-4">
+              <li><Link href="/tentang-byd-cibubur" className="text-lg hover:text-teal-500 transition-colors">Tentang BYD Cibubur</Link></li>
               <li><Link href="/model/sealion-7" className="text-lg hover:text-teal-500 transition-colors">BYD Sealion 7</Link></li>
               <li><Link href="/model/seal" className="text-lg hover:text-teal-500 transition-colors">BYD Seal</Link></li>
               <li><Link href="/model/atto-3" className="text-lg hover:text-teal-500 transition-colors">BYD Atto 3</Link></li>
