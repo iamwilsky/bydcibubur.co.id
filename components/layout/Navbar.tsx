@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Daftar Harga', path: '/pricelist' },
-    { name: 'Tentang', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   // Check if current page is one that usually starts transparent (Home or Models)

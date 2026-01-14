@@ -10,8 +10,8 @@ export async function generateMetadata(): Promise<Metadata> {
     const dealerInfo = await getDealerInfo()
 
     return {
-        title: `Tentang ${dealerInfo.dealerName} - Dealer Resmi 3S & Sales Consultant`,
-        description: `Kenali ${dealerInfo.dealerName}, dealer resmi fasilitas 3S (Sales, Service, Sparepart). Hubungi ${dealerInfo.salesName} untuk konsultasi mobil listrik BYD profesional.`,
+        title: `Hubungi ${dealerInfo.dealerName} - Kontak Dealer & Lokasi Showroom`,
+        description: `Hubungi ${dealerInfo.dealerName} untuk test drive dan penawaran terbaik. Lokasi showroom strategis, layanan 3S (Sales, Service, Sparepart) & konsultan profesional.`,
         keywords: ['BYD Cibubur', 'Dealer BYD', 'Sales BYD', 'Service BYD'],
     }
 }
