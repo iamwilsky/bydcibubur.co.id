@@ -57,11 +57,17 @@ export const metadata: Metadata = {
         ],
     },
     manifest: '/manifest.json',
+    appleWebApp: {
+        capable: true,
+        title: 'BYD Cibubur',
+        statusBarStyle: 'black-translucent',
+    },
     verification: {
         google: 'google-site-verification-code', // Add if available
     },
     other: {
         'og:logo': 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
+        'apple-mobile-web-app-title': 'BYD Cibubur',
     }
 }
 
@@ -80,6 +86,7 @@ export default async function RootLayout({
         '@id': 'https://bydcibubur.co.id/#dealer',
         name: dealerInfo.dealerName,
         image: 'https://bydcibubur.co.id/images/models/seal/hero/byd-seal-hero.webp',
+        logo: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
         description: `Dealer Resmi ${dealerInfo.dealerName} menyediakan penjualan, servis, dan suku cadang mobil listrik BYD.`,
         address: {
             '@type': 'PostalAddress',
