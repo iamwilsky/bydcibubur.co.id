@@ -39,13 +39,13 @@ BYD Cibubur menyediakan berbagai model kendaraan listrik yang dirancang untuk me
 
 ### [BYD Dolphin](/model/byd-dolphin)
 
-![BYD Dolphin Hatchback Listrik 2025 - Interior Lapang](/images/models/dolphin/hero/byd-dolphin-hero.webp)
+![BYD Dolphin Hatchback Listrik 2025 - Interior Lapang](/images/tentang-byd-cibubur/dolphin.webp)
 
 **[BYD Dolphin](/model/byd-dolphin)** merupakan hatchback listrik yang menggabungkan desain modern dengan kepraktisan untuk mobilitas urban. Dengan dimensi yang kompak namun kabin yang lapang, Dolphin cocok untuk Anda yang menginginkan kendaraan gesit di perkotaan tanpa mengorbankan kenyamanan. Teknologi baterai BYD memberikan jangkauan tempuh yang memadai untuk kebutuhan harian, sementara fitur keselamatan lengkap memastikan perlindungan optimal bagi penumpang.
 
 ### [BYD Atto 3](/model/byd-atto-3)
 
-![BYD Atto 3 SUV Listrik Kompak Keluarga](/images/models/atto-3/hero/byd-atto3-hero.webp)
+![BYD Atto 3 SUV Listrik Kompak Keluarga](/images/tentang-byd-cibubur/atto3.webp)
 
 Sebagai SUV kompak, **[BYD Atto 3](/model/byd-atto-3)** menawarkan kombinasi sempurna antara ruang, kenyamanan, dan performa. Model ini dirancang untuk keluarga modern yang mengutamakan kepraktisan tanpa mengorbankan gaya. Interior yang luas, fitur infotainment canggih, dan sistem keselamatan komprehensif menjadikan Atto 3 pilihan populer di segmennya.
 
@@ -53,19 +53,19 @@ Ground clearance yang memadai memberikan kemampuan melewati berbagai kondisi jal
 
 ### [BYD Seal](/model/byd-seal)
 
-![BYD Seal Sedan Sport Listrik Premium](/images/models/seal/hero/byd-seal-hero.webp)
+![BYD Seal Sedan Sport Listrik Premium](/images/tentang-byd-cibubur/seal.webp)
 
 **[BYD Seal](/model/byd-seal)** hadir sebagai sedan listrik premium yang menargetkan konsumen yang mengutamakan performa dan teknologi. Dengan desain yang elegan dan aerodinamis, Seal menawarkan pengalaman berkendara sporty dengan efisiensi energi yang tinggi. Platform e-Platform 3.0 memberikan fondasi teknologi terkini yang mendukung berbagai fitur canggih.
 
 ### [BYD Sealion 7](/model/byd-sealion-7)
 
-![BYD Sealion 7 SUV Listrik Mewah Terbaru](/images/models/sealion-7/hero/byd-sealion7-hero.webp)
+![BYD Sealion 7 SUV Listrik Mewah Terbaru](/images/tentang-byd-cibubur/sealion7.webp)
 
 **[BYD Sealion 7](/model/byd-sealion-7)** merupakan SUV premium yang mengusung teknologi dan kemewahan dalam satu paket lengkap. Dengan dimensi yang lebih besar dan kabin yang mewah, model ini dirancang untuk memenuhi kebutuhan keluarga yang menginginkan kenyamanan maksimal dalam perjalanan jarak jauh.
 
 ### [BYD M6](/model/byd-m6)
 
-![BYD M6 MPV Listrik Keluarga 7 Seater](/images/models/m6/hero/byd-m6-hero.webp)
+![BYD M6 MPV Listrik Keluarga 7 Seater](/images/tentang-byd-cibubur/m6.webp)
 
 **[BYD M6](/model/byd-m6)** hadir sebagai solusi MPV listrik yang mengutamakan kepraktisan dan efisiensi ruang. Dengan konfigurasi tempat duduk yang fleksibel, M6 cocok untuk keluarga besar atau kebutuhan komersial yang memerlukan kapasitas penumpang lebih banyak.
 
