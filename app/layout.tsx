@@ -80,7 +80,8 @@ export default async function RootLayout({
 }) {
     const dealerInfo = await getDealerInfo()
 
-    const jsonLd = {
+    // AutoDealer Schema with ContactPoint
+    const autoDealerSchema = {
         '@context': 'https://schema.org',
         '@type': 'AutoDealer',
         '@id': 'https://bydcibubur.co.id/#dealer',
@@ -103,6 +104,15 @@ export default async function RootLayout({
         },
         url: 'https://bydcibubur.co.id',
         telephone: `+${dealerInfo.salesPhone}`,
+        email: dealerInfo.email,
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: `+${dealerInfo.salesPhone}`,
+            contactType: 'sales',
+            areaServed: 'ID',
+            availableLanguage: ['Indonesian', 'English'],
+            contactOption: 'TollFree'
+        },
         openingHoursSpecification: [
             {
                 '@type': 'OpeningHoursSpecification',
@@ -114,13 +124,47 @@ export default async function RootLayout({
         priceRange: '$$$'
     }
 
+    // Organization Schema for Knowledge Graph
+    const organizationSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': 'https://bydcibubur.co.id/#organization',
+        name: 'BYD Cibubur',
+        alternateName: 'Dealer BYD Cibubur',
+        url: 'https://bydcibubur.co.id',
+        logo: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
+        description: 'Dealer Resmi BYD Cibubur - Showroom Mobil Listrik Terpercaya di Jatikarya, Bekasi. Melayani Kota Wisata, Legenda Wisata, Depok, dan Jakarta Timur.',
+        email: dealerInfo.email,
+        telephone: `+${dealerInfo.salesPhone}`,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: dealerInfo.address,
+            addressLocality: 'Bekasi',
+            addressRegion: 'Jawa Barat',
+            postalCode: '17435',
+            addressCountry: 'ID'
+        },
+        sameAs: [
+            // Add social media URLs when available
+            // 'https://www.instagram.com/bydcibubur',
+            // 'https://www.facebook.com/bydcibubur',
+            // 'https://www.youtube.com/@bydcibubur'
+        ]
+    }
+
     return (
         <html lang="id" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
             <head>
                 <meta name="theme-color" content="#111827" />
+                {/* AutoDealer Schema */}
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(autoDealerSchema) }}
+                />
+                {/* Organization Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
                 <script
                     dangerouslySetInnerHTML={{

@@ -27,6 +27,22 @@ const faqData = [
   {
     q: "Apakah BYD Cibubur menyediakan layanan kredit?",
     a: "Ya, BYD Cibubur bekerja sama dengan berbagai leasing dan bank untuk memberikan kemudahan pembiayaan. Kami menyediakan simulasi kredit dengan tenor hingga 7 tahun dan DP rendah mulai dari 20%."
+  },
+  {
+    q: "Apakah Showroom BYD Cibubur melayani wilayah Kota Wisata dan Legenda Wisata?",
+    a: "Tentu saja! Showroom BYD Cibubur melayani seluruh wilayah Cibubur termasuk Kota Wisata, Legenda Wisata, Citra Grand, Raffles Hills, serta area Bekasi Timur, Depok, dan Jakarta Timur. Lokasi kami di Jl. Transyogi sangat mudah diakses dari kawasan-kawasan tersebut."
+  },
+  {
+    q: "Apakah ada fasilitas charging station di dealer BYD Cibubur?",
+    a: "Ya, dealer BYD Cibubur menyediakan fasilitas charging station gratis untuk pelanggan yang berkunjung. Anda bisa mengisi daya mobil listrik BYD Anda sambil melakukan servis, konsultasi, atau sekadar berkunjung ke showroom kami."
+  },
+  {
+    q: "Berapa harga mobil BYD di Cibubur?",
+    a: "Harga mobil BYD di Cibubur bervariasi tergantung model dan varian. BYD Dolphin mulai dari Rp 400 jutaan, BYD Atto 3 mulai dari Rp 500 jutaan, dan BYD Seal mulai dari Rp 700 jutaan (harga OTR Bekasi/Depok). Hubungi sales kami untuk informasi harga terbaru dan promo spesial BYD Cibubur."
+  },
+  {
+    q: "Apa perbedaan membeli di BYD Cibubur dengan dealer lain?",
+    a: "BYD Cibubur adalah dealer resmi dengan layanan 3S lengkap (Sales, Service, Sparepart) di lokasi strategis Transyogi. Kami menawarkan garansi resmi, teknisi tersertifikasi, harga kompetitif, proses cepat, dan pelayanan profesional khusus untuk wilayah Bekasi, Depok, dan Jakarta Timur."
   }
 ];
 

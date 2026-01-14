@@ -19,8 +19,28 @@ export default async function HomePage() {
     // Fetch data at build time / revalidation
     const models = await getModelsWithPricing()
 
+    // BreadcrumbList Schema for Homepage
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {
+                '@type': 'ListItem',
+                'position': 1,
+                'name': 'Home',
+                'item': 'https://bydcibubur.co.id'
+            }
+        ]
+    }
+
     return (
         <Layout>
+            {/* Breadcrumb Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+
             <div className="animate-fade-in">
                 {/* Hero Slider Section */}
                 <HomeHero initialModels={models} />
