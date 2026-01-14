@@ -30,8 +30,7 @@ export const HomeAreaServed: React.FC = () => {
     const areaServedSchema = {
         "@context": "https://schema.org",
         "@type": "AutoDealer",
-        "name": "BYD Cibubur",
-        "url": "https://bydcibubur.co.id",
+        "@id": "https://bydcibubur.co.id/#dealer",
         "areaServed": areasServed.flatMap(area =>
             area.subAreas.map(subArea => ({
                 "@type": "Place",
