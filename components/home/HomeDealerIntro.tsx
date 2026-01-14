@@ -11,7 +11,7 @@ export const HomeDealerIntro: React.FC = () => {
     return (
         <section className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 border-t border-gray-100 dark:border-slate-800">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
                     {/* Left Content */}
                     <div>
                         <span className="text-teal-600 dark:text-teal-500 font-bold uppercase tracking-widest text-sm mb-2 block">
@@ -56,39 +56,59 @@ export const HomeDealerIntro: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right Content - Feature Cards */}
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800">
-                            <Shield className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                            <h3 className="font-bold text-slate-900 dark:text-white mb-2">Dealer Resmi</h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Authorized dealer BYD Indonesia dengan garansi resmi
-                            </p>
+                    {/* Right Content - Showroom Image */}
+                    <div className="relative group">
+                        <div className="absolute inset-0 bg-teal-500 rounded-2xl rotate-3 opacity-20 group-hover:rotate-6 transition-transform duration-500"></div>
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-slate-700 aspect-[4/3]">
+                            <img
+                                src="/images/byd-cibubur-showroom.webp"
+                                alt="Gedung Showroom BYD Cibubur - Dealer Resmi Mobil Listrik Terlengkap"
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <div className="absolute bottom-6 left-6 right-6">
+                                <div className="flex items-center gap-2 text-white mb-1">
+                                    <MapPin className="w-4 h-4 text-teal-400" />
+                                    <span className="text-sm font-bold tracking-wider uppercase">Jatikarya, Cibubur</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Showroom & Bengkel Resmi</h3>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600">
-                            <Award className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                            <h3 className="font-bold text-slate-900 dark:text-white mb-2">Layanan 3S</h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Sales, Service, dan Sparepart dalam satu lokasi
-                            </p>
-                        </div>
+                {/* Features Grid - Now at Bottom */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800 hover:shadow-lg transition-shadow">
+                        <Shield className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Dealer Resmi</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                            Authorized dealer BYD Indonesia dengan garansi resmi
+                        </p>
+                    </div>
 
-                        <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600">
-                            <MapPin className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                            <h3 className="font-bold text-slate-900 dark:text-white mb-2">Lokasi Strategis</h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Akses mudah dari Tol Jatikarya & Transyogi
-                            </p>
-                        </div>
+                    <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600 hover:shadow-lg transition-shadow">
+                        <Award className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Layanan 3S</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                            Sales, Service, dan Sparepart dalam satu lokasi
+                        </p>
+                    </div>
 
-                        <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800">
-                            <Users className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                            <h3 className="font-bold text-slate-900 dark:text-white mb-2">Tim Profesional</h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Sales Consultant berpengalaman siap membantu
-                            </p>
-                        </div>
+                    <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600 hover:shadow-lg transition-shadow">
+                        <MapPin className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Lokasi Strategis</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                            Akses mudah dari Tol Jatikarya & Transyogi
+                        </p>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800 hover:shadow-lg transition-shadow">
+                        <Users className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Tim Profesional</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                            Sales Consultant berpengalaman siap membantu
+                        </p>
                     </div>
                 </div>
             </div>
