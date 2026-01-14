@@ -80,12 +80,13 @@ export default async function RootLayout({
 }) {
     const dealerInfo = await getDealerInfo()
 
-    // AutoDealer Schema with ContactPoint
+    // AutoDealer Schema with ContactPoint (Consolidated)
     const autoDealerSchema = {
         '@context': 'https://schema.org',
         '@type': 'AutoDealer',
         '@id': 'https://bydcibubur.co.id/#dealer',
         name: dealerInfo.dealerName,
+        alternateName: 'Dealer BYD Cibubur',
         image: 'https://bydcibubur.co.id/images/models/seal/hero/byd-seal-hero.webp',
         logo: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
         description: `Dealer Resmi ${dealerInfo.dealerName} menyediakan penjualan, servis, dan suku cadang mobil listrik BYD.`,
@@ -121,30 +122,7 @@ export default async function RootLayout({
                 closes: '20:00'
             }
         ],
-        priceRange: '$$$'
-    }
-
-    // Organization Schema for Knowledge Graph
-    const organizationSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        '@id': 'https://bydcibubur.co.id/#organization',
-        name: 'BYD Cibubur',
-        alternateName: 'Dealer BYD Cibubur',
-        url: 'https://bydcibubur.co.id',
-        logo: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
-        image: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
-        description: 'Dealer Resmi BYD Cibubur - Showroom Mobil Listrik Terpercaya di Jatikarya, Bekasi. Melayani Kota Wisata, Legenda Wisata, Depok, dan Jakarta Timur.',
-        email: dealerInfo.email,
-        telephone: `+${dealerInfo.salesPhone}`,
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: dealerInfo.address,
-            addressLocality: 'Bekasi',
-            addressRegion: 'Jawa Barat',
-            postalCode: '17435',
-            addressCountry: 'ID'
-        },
+        priceRange: '$$$',
         sameAs: [
             // Add social media URLs when available
             // 'https://www.instagram.com/bydcibubur',
@@ -161,11 +139,6 @@ export default async function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(autoDealerSchema) }}
-                />
-                {/* Organization Schema */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
                 <script
                     dangerouslySetInnerHTML={{
