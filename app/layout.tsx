@@ -133,6 +133,7 @@ export default async function RootLayout({
         alternateName: 'Dealer BYD Cibubur',
         url: 'https://bydcibubur.co.id',
         logo: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
+        image: 'https://bydcibubur.co.id/web-app-manifest-512x512.png',
         description: 'Dealer Resmi BYD Cibubur - Showroom Mobil Listrik Terpercaya di Jatikarya, Bekasi. Melayani Kota Wisata, Legenda Wisata, Depok, dan Jakarta Timur.',
         email: dealerInfo.email,
         telephone: `+${dealerInfo.salesPhone}`,

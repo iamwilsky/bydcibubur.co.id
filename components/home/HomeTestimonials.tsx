@@ -72,8 +72,11 @@ export const HomeTestimonials: React.FC = () => {
     const reviewSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://bydcibubur.co.id/#dealer",
         "name": "BYD Cibubur",
         "image": "https://bydcibubur.co.id/images/og-image.webp",
+        "telephone": "+6282298200029",
+        "priceRange": "$$$",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Jl. Alternatif Cibubur No.41, Jatikarya",
