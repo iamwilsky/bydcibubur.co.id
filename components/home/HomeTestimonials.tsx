@@ -161,7 +161,7 @@ export const HomeTestimonials: React.FC = () => {
                                     {testimonial.name.charAt(0)}
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white">{testimonial.name}</h4>
+                                    <div className="font-bold text-slate-900 dark:text-white">{testimonial.name}</div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">
                                         {testimonial.location} • {testimonial.carModel}
                                     </p>

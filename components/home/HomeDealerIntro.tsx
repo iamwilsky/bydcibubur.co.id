@@ -17,9 +17,9 @@ export const HomeDealerIntro: React.FC = () => {
                         <span className="text-teal-600 dark:text-teal-500 font-bold uppercase tracking-widest text-sm mb-2 block">
                             Tentang Kami
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 leading-tight">
                             Dealer Resmi BYD Cibubur – Showroom Mobil Listrik Terpercaya
-                        </h2>
+                        </h1>
 
                         <div className="prose prose-lg dark:prose-invert max-w-none">
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
@@ -77,7 +77,7 @@ export const HomeDealerIntro: React.FC = () => {
                                     <MapPin className="w-4 h-4 text-teal-400" />
                                     <span className="text-sm font-bold tracking-wider uppercase">Jatikarya, Cibubur</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Showroom & Bengkel Resmi</h3>
+                                <div className="text-2xl font-bold text-white">Showroom & Bengkel Resmi</div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ export const HomeDealerIntro: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800 hover:shadow-lg transition-shadow">
                         <Shield className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Dealer Resmi</h3>
+                        <div className="font-bold text-slate-900 dark:text-white mb-2">Dealer Resmi</div>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                             Authorized dealer BYD Indonesia dengan garansi resmi
                         </p>
@@ -95,7 +95,7 @@ export const HomeDealerIntro: React.FC = () => {
 
                     <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600 hover:shadow-lg transition-shadow">
                         <Award className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Layanan 3S</h3>
+                        <div className="font-bold text-slate-900 dark:text-white mb-2">Layanan 3S</div>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                             Sales, Service, dan Sparepart dalam satu lokasi
                         </p>
@@ -103,7 +103,7 @@ export const HomeDealerIntro: React.FC = () => {
 
                     <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl border border-slate-200 dark:border-slate-600 hover:shadow-lg transition-shadow">
                         <MapPin className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Lokasi Strategis</h3>
+                        <div className="font-bold text-slate-900 dark:text-white mb-2">Lokasi Strategis</div>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                             Akses mudah dari Tol Jatikarya & Transyogi
                         </p>
@@ -111,7 +111,7 @@ export const HomeDealerIntro: React.FC = () => {
 
                     <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/20 p-6 rounded-2xl border border-teal-200 dark:border-teal-800 hover:shadow-lg transition-shadow">
                         <Users className="w-10 h-10 text-teal-600 dark:text-teal-400 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Tim Profesional</h3>
+                        <div className="font-bold text-slate-900 dark:text-white mb-2">Tim Profesional</div>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                             Sales Consultant berpengalaman siap membantu
                         </p>

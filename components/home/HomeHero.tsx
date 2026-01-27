@@ -103,9 +103,9 @@ export const HomeHero: React.FC<Props> = ({ initialModels }) => {
 
                 {/* Badge (Now Semantic H1) */}
                 <div className="flex items-center gap-3 mb-3 md:mb-6">
-                  <h1 className="px-3 py-1 border border-teal-500/50 text-teal-600 dark:text-teal-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full bg-teal-50 dark:bg-teal-950/30 backdrop-blur-sm">
+                  <div className="px-3 py-1 border border-teal-500/50 text-teal-600 dark:text-teal-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full bg-teal-50 dark:bg-teal-950/30 backdrop-blur-sm">
                     Dealer Resmi BYD Cibubur
-                  </h1>
+                  </div>
                 </div>
 
                 {/* Model Name (Now Semantic H2) */}
