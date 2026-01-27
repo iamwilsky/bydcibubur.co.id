@@ -36,7 +36,12 @@ export const HomeModelShowcase: React.FC<Props> = ({ initialModels }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {models.map((model) => (
-            <Link href={`/model/${model.id}`} key={model.id} className="group block h-full">
+            <Link
+              href={`/model/${model.id}`}
+              key={model.id}
+              className="group block h-full"
+              aria-label={`Lihat detail dan harga ${model.name}`}
+            >
               <div className="flex flex-col h-full bg-white dark:bg-slate-800 rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 transform-gpu border border-gray-100 dark:border-slate-700 overflow-hidden">
 
                 {/* Image Container */}

@@ -49,7 +49,7 @@ export const HomeWhyUs: React.FC = () => {
               </div>
               <div className="bg-slate-50 dark:bg-slate-800 p-8 border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all rounded-xl">
                 <Zap className="w-10 h-10 text-teal-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">Fast Charging</h3>
+                <div className="text-xl font-bold mb-2 text-slate-900 dark:text-white">Fast Charging</div>
                 <p className="text-gray-500 dark:text-gray-400 text-sm">Dukungan DC Charging cepat. Isi daya dari 30% ke 80% dalam waktu kurang dari 30 menit.</p>
               </div>
             </div>

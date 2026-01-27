@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Layout } from '@/components/layout/Layout';
 import { Metadata } from 'next';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
+import { SocialShare } from '@/components/ui/SocialShare';
 
 // Helper to parse frontmatter (Simple Regex)
 function getPostContent() {
@@ -90,6 +91,12 @@ export default function SeoArticlePage() {
                             </ReactMarkdown>
                         </article>
                     </div>
+
+                    {/* Social Share */}
+                    <SocialShare
+                        url={`https://bydcibubur.co.id/tentang-byd-cibubur`}
+                        title={data.title}
+                    />
 
                     {/* CTA Section */}
                     <div className="bg-teal-600 dark:bg-teal-900/50 rounded-2xl p-8 md:p-12 text-center shadow-lg text-white">

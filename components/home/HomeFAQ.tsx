@@ -85,10 +85,10 @@ export const HomeFAQ: React.FC = () => {
         <div className="space-y-4">
           {faqData.map((item, idx) => (
             <div key={idx} className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-100 dark:border-slate-700 shadow-sm">
-              <h3 className="flex items-start gap-3 font-bold text-slate-900 dark:text-white text-lg mb-2">
+              <div className="flex items-start gap-3 font-bold text-slate-900 dark:text-white text-lg mb-2">
                 <HelpCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
                 {item.q}
-              </h3>
+              </div>
               <p className="text-gray-600 dark:text-gray-300 pl-8 leading-relaxed text-sm md:text-base">
                 {item.a}
               </p>

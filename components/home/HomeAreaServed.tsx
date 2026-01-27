@@ -74,7 +74,7 @@ export const HomeAreaServed: React.FC = () => {
                                 <div className="w-10 h-10 rounded-full bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center group-hover:bg-teal-500 transition-colors">
                                     <MapPin className="w-5 h-5 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">{area.name}</h3>
+                                <div className="text-xl font-bold text-slate-900 dark:text-white">{area.name}</div>
                             </div>
 
                             {/* Sub Areas */}

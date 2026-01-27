@@ -2,7 +2,7 @@
 const nextConfig = {
   // Enable static exports for Netlify
   // Note: We use ISR which Netlify supports via @netlify/plugin-nextjs
-  
+
   images: {
     remotePatterns: [
       {
@@ -25,6 +25,9 @@ const nextConfig = {
 
   // Generate static pages
   // ISR pages will be regenerated on Netlify
+
+  // Disable X-Powered-By header
+  poweredByHeader: false,
 }
 
 module.exports = nextConfig

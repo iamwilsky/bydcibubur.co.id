@@ -22,14 +22,14 @@ export const metadata: Metadata = {
         canonical: './',
     },
     title: {
-        default: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD - Sealion 7, Seal, Atto 3, Dolphin',
+        default: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD',
         template: '%s | BYD Cibubur'
     },
-    description: 'Kunjungi BYD Cibubur, dealer resmi BYD Indonesia. Dapatkan penawaran harga terbaik untuk mobil listrik BYD Sealion 7, Seal, Atto 3, dan Dolphin. Test drive sekarang di showroom kami.',
-    keywords: ['BYD Cibubur', 'Dealer BYD', 'BYD Sealion 7', 'BYD Seal', 'BYD Atto 3', 'BYD Dolphin', 'Mobil Listrik Indonesia'],
+    description: 'Dealer Resmi BYD Cibubur. Pusat penjualan, servis, dan suku cadang mobil listrik BYD. Dapatkan promo dan harga terbaik hari ini.',
+    keywords: ['BYD Cibubur', 'Dealer BYD', 'BYD Sealion 7', 'BYD Seal', 'BYD Atto 3', 'BYD Dolphin'],
     openGraph: {
         title: 'BYD Cibubur | Dealer Resmi Mobil Listrik BYD',
-        description: 'Dealer Resmi BYD Cibubur. Wujudkan impian mobil listrik Anda dengan teknologi BYD Blade Battery. Hubungi kami untuk promo terbaru.',
+        description: 'Dealer Resmi BYD Cibubur. Pusat penjualan dan servis mobil listrik BYD. Dapatkan promo terbaik hari ini.',
         url: 'https://bydcibubur.co.id',
         siteName: 'BYD Cibubur',
         images: [

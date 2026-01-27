@@ -51,7 +51,7 @@ export const HomeLocation: React.FC = () => {
                   <Phone className="w-5 h-5 text-slate-900 dark:text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white mb-1">Hubungi Kami</h3>
+                  <div className="font-bold text-slate-900 dark:text-white mb-1">Hubungi Kami</div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Sales: {dealerInfo.displayPhone} ({dealerInfo.salesName})</p>
                 </div>
               </div>
