@@ -26,3 +26,7 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+# Agent Internal
+.agent/
+.gemini/
