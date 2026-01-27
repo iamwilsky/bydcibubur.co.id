@@ -30,3 +30,4 @@ out
 # Agent Internal
 .agent/
 .gemini/
+.claude/
